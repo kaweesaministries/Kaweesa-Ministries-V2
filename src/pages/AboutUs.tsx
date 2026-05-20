@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import WorldMapDemo from '../components/WorldMapDemo';
 import { Timeline } from '../components/ui/timeline';
+import FinancialReadiness from "../components/v2/FinancialReadiness";
 const AboutUs = () => {
 
 
@@ -43,6 +44,10 @@ const AboutUs = () => {
     </section>
 
     <WorldMapDemo />
+
+    <section className="py-24 px-6 max-w-7xl mx-auto">
+      <FinancialReadiness />
+    </section>
 
     <Timeline data={[
       {

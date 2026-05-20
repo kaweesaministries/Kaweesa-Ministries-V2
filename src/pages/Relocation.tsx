@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import CombinedFeaturedSection from "../components/ui/combined-featured-section";
 import MoveLogicCalculator from '../components/v2/MoveLogicCalculator';
 import RelocationPulse from '../components/v2/RelocationPulse';
+import FinancialReadiness from "../components/v2/FinancialReadiness";
 const Relocation = () => {
 
 
@@ -27,6 +28,10 @@ const Relocation = () => {
 
     <div className="max-w-7xl mx-auto px-6 mb-24">
       <MoveLogicCalculator />
+    </div>
+
+    <div className="max-w-7xl mx-auto px-6 mb-24">
+      <FinancialReadiness />
     </div>
 
     <CombinedFeaturedSection />

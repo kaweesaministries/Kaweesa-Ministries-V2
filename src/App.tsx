@@ -21,6 +21,7 @@ import Contact from './Contact';
 import Relocation from './pages/Relocation';
 import AboutUs from './pages/AboutUs';
 import FoundersCircle from './components/v2/FoundersCircle';
+import FinancialReadiness from "./components/v2/FinancialReadiness";
 import { blogPosts } from './data/blogPosts';
 import {
   Search,
@@ -678,6 +679,10 @@ const Home = () => {
       <JobCards />
       <CityExplorer />
       <CombinedFeaturedSection />
+
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <FinancialReadiness />
+      </section>
 
       <Insights />
       <Newsletter />
