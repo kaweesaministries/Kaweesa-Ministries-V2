@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageHeader from './components/PageHeader';
 import { Shield, FileCheck, Info, CheckCircle2, FileText, Globe, Plane, Users, CheckSquare } from 'lucide-react';
+import FinancialReadiness from "./components/v2/FinancialReadiness";
 import { Badge } from './components/ui/Badge';
 const VisaGuide = () => {
 
@@ -157,6 +158,10 @@ const VisaGuide = () => {
         </div>
       </section>
 
+
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <FinancialReadiness />
+      </section>
       {/* Step-by-Step Process */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-gray-50/50">
         <div className="text-center max-w-2xl mx-auto mb-16">
