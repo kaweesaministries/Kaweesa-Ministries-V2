@@ -32,14 +32,14 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - OpenDoor Europe</title>
-        <meta name="description" content="Get in touch with the OpenDoor team for support, inquiries, or partnership opportunities." />
+        <title>Contact Us - KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Get in touch with KAWEESA CHILDREN'S MINISTRIES to learn more about our programs or how you can support our mission in Uganda." />
       </Helmet>
       <div className="min-h-screen bg-white">
       <PageHeader
         title="Contact Us"
-        subtitle="We'd love to hear from you"
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+        subtitle="Get in touch with our team"
+        bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
       />
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -56,7 +56,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-gray-600"><a href="mailto:europeopendoor@gmail.com" className="hover:text-primary transition-colors">europeopendoor@gmail.com</a></p>
+                  <p className="text-gray-600"><a href="mailto:info@kaweesaministry.org" className="hover:text-primary transition-colors">info@kaweesaministry.org</a></p>
                   <p className="text-sm text-gray-400 mt-1">We aim to reply within 24 hours.</p>
                 </div>
               </div>
@@ -68,9 +68,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-lg mb-1">Phone</h3>
                   <p className="text-gray-600">
-                    <a href="tel:+4915210755401" className="hover:text-primary transition-colors">+49 152 1075 5401</a>
+                    <a href="tel:+256772477774" className="hover:text-primary transition-colors">+256 772 477 774</a>
                   </p>
-                  <p className="text-sm text-gray-400 mt-1">Mon-Fri from 9am to 6pm CET.</p>
+                  <p className="text-sm text-gray-400 mt-1">Available Mon-Sat for inquiries.</p>
                 </div>
               </div>
 
@@ -81,7 +81,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-bold text-lg mb-1">WhatsApp</h3>
                   <p className="text-gray-600">
-                    <a href="https://wa.me/4915210755401" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">+49 152 1075 5401</a>
+                    <a href="https://wa.me/256772477774" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">+256 772 477 774</a>
                   </p>
                   <p className="text-sm text-gray-400 mt-1">Chat with us directly on WhatsApp.</p>
                 </div>
@@ -93,8 +93,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Office</h3>
-                  <p className="text-gray-600">Berlin, Germany</p>
-                  <p className="text-sm text-gray-400 mt-1">Come say hello at our HQ.</p>
+                  <p className="text-gray-600">Kampala, Uganda</p>
+                  <p className="text-sm text-gray-400 mt-1">Visit our local center.</p>
                 </div>
               </div>
             </div>

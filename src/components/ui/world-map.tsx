@@ -17,7 +17,7 @@ export function WorldMap({
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
-  const theme = "light"; // Hardcoded to match OpenDoor light theme
+  const theme = "light"; // Hardcoded to match KCM light theme
 
   const svgMap = map.getSVG({
     radius: 0.22,

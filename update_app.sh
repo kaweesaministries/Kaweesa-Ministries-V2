@@ -1,3 +1,0 @@
-#!/bin/bash
-sed -i 's/const filteredJobs = JOBS.filter(job => {/\/\/ ⚡ Bolt: Memoize the filtered jobs to prevent O(N) recalculations on every render unless filter states change\n  const filteredJobs = React.useMemo(() => JOBS.filter(job => {/g' src/App.tsx
-sed -i 's/return matchesSearch && matchesLocationTerm && matchesRole && matchesLocationCheckbox && matchesVisa && matchesRelocation;\n  });/return matchesSearch \&\& matchesLocationTerm \&\& matchesRole \&\& matchesLocationCheckbox \&\& matchesVisa \&\& matchesRelocation;\n  }), [searchTerm, locationTerm, selectedRoles, selectedLocations, visaSupport, relocation]);/g' src/App.tsx

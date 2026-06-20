@@ -41,8 +41,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Our Growing Impact
         </h2>
         <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg max-w-2xl mx-auto">
-          Since 2020, we&apos;ve been on a mission to simplify international relocation. 
-          Here&apos;s a look at our milestones and the thousands of lives we&apos;ve helped change.
+          Since 2020, we&apos;ve been on a mission to nurture and empower children in Uganda.
+          Here&apos;s a look at our milestones and the lives we&apos;ve helped transform.
         </p>
       </div>
 

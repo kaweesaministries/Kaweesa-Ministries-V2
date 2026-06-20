@@ -1,2 +1,0 @@
-#!/bin/bash
-sed -i 's/return matchesSearch \&\& matchesLocationTerm \&\& matchesRole \&\& matchesLocationCheckbox \&\& matchesVisa \&\& matchesRelocation;\n  });/return matchesSearch \&\& matchesLocationTerm \&\& matchesRole \&\& matchesLocationCheckbox \&\& matchesVisa \&\& matchesRelocation;\n  }), [searchTerm, locationTerm, selectedRoles, selectedLocations, visaSupport, relocation]);/g' src/App.tsx
