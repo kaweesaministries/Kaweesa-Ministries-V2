@@ -2,87 +2,87 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageHeader from './components/PageHeader';
-import { Shield, FileCheck, Info, CheckCircle2, FileText, Globe, Plane, Users, CheckSquare } from 'lucide-react';
-import FinancialReadiness from "./components/v2/FinancialReadiness";
+import { Shield, FileCheck, Info, CheckCircle2, FileText, Globe, Heart, Users, CheckSquare, GraduationCap, Sparkles } from 'lucide-react';
 import { Badge } from './components/ui/Badge';
-const VisaGuide = () => {
+
+const SupportGuide = () => {
 
   const [activeTab, setActiveTab] = useState(0);
 
-  const visaTypes = [
+  const supportTypes = [
     {
-      id: "eu-blue-card",
-      title: "EU Blue Card",
-      icon: <Globe className="w-5 h-5" />,
-      desc: "For highly skilled non-EU citizens. Allows you to work and live in most EU countries.",
-      features: ["Fast-track processing", "Family reunification", "Path to permanent residence"],
+      id: "child-sponsorship",
+      title: "Child Sponsorship",
+      icon: <Heart className="w-5 h-5" />,
+      desc: "Connect directly with a child and support their education, health, and holistic development.",
+      features: ["Monthly letters & updates", "Birthday & holiday cards", "Academic progress reports"],
       requirements: [
-        "University degree or equivalent qualification",
-        "Binding job offer or work contract for at least 1 year",
-        "Salary meeting the minimum threshold for the specific country",
-        "Health insurance coverage"
+        "Commitment to monthly support ($35/month)",
+        "Willingness to encourage and pray for your student",
+        "Consistent communication through our platform",
+        "At least 1-year sponsorship commitment preferred"
       ]
     },
     {
-      id: "tech-visa",
-      title: "Tech / Startup Visa",
-      icon: <Plane className="w-5 h-5" />,
-      desc: "Specific to tech talent and entrepreneurs. Available in countries like France, Portugal, and Estonia.",
-      features: ["Lower salary thresholds", "Simplified procedure", "Valid for 3-5 years"],
+      id: "project-funding",
+      title: "Project Funding",
+      icon: <Sparkles className="w-5 h-5" />,
+      desc: "Support specific initiatives like building classrooms, mobile clinics, or vocational training centers.",
+      features: ["One-time or recurring gifts", "Impact reports for the project", "Named recognition for major gifts"],
       requirements: [
-        "Job offer from a certified tech company or startup",
-        "Relevant technical skills and experience",
-        "Proof of sufficient funds (varies by country)"
+        "Donation to a specific active project fund",
+        "Participation in fundraising campaigns",
+        "Spreading awareness within your network"
       ]
     },
     {
-      id: "digital-nomad",
-      title: "Digital Nomad Visa",
+      id: "corporate-partnership",
+      title: "Corporate Partnership",
       icon: <Users className="w-5 h-5" />,
-      desc: "For remote workers employed by companies outside the country of residence.",
-      features: ["Work from anywhere", "Tax benefits in some regions", "Renewable annually"],
+      desc: "Strategic partnerships for companies to fulfill their CSR goals and make a global impact.",
+      features: ["Employee engagement programs", "Joint marketing initiatives", "Tax-deductible contributions"],
       requirements: [
-        "Proof of remote employment outside the host country",
-        "Minimum monthly income requirement (varies significantly)",
-        "Clean criminal record"
+        "Alignment with our core mission and values",
+        "Annual partnership agreement",
+        "Collaboration on sustainability goals"
       ]
     }
   ];
 
   const steps = [
     {
-      title: "Document Collection",
-      desc: "Gather all necessary paperwork including your passport, degree certificates, and health insurance.",
-      icon: <FileText className="w-6 h-6" />
+      title: "Choose a Program",
+      desc: "Select between child sponsorship, project funding, or general support based on your heart for the mission.",
+      icon: <Heart className="w-6 h-6" />
     },
     {
-      title: "Employer Sponsorship",
-      desc: "Your future employer initiates the process by providing the employment contract and sponsorship letter.",
+      title: "Secure Donation",
+      desc: "Set up your secure recurring or one-time contribution through our vetted payment partners.",
       icon: <Shield className="w-6 h-6" />
     },
     {
-      title: "Application Submission",
-      desc: "Submit your application to the embassy or consulate in your home country.",
+      title: "Welcome Package",
+      desc: "Receive your student's profile or project details and a welcome kit from our team in Uganda.",
       icon: <Globe className="w-6 h-6" />
     },
     {
-      title: "Visa Approval & Travel",
-      desc: "Receive your entry visa, book your flights, and travel to your new home.",
-      icon: <Plane className="w-6 h-6" />
+      title: "Ongoing Impact",
+      desc: "Stay connected through regular updates and see how your support is transforming lives.",
+      icon: <Sparkles className="w-6 h-6" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Visa & Relocation Guide - OpenDoor Europe</title>
-        <meta name="description" content="Comprehensive visa and relocation guide for non-EU professionals moving to Europe." />
+        <title>Sponsorship & Support Guide - KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Comprehensive guide on how to support KAWEESA CHILDREN'S MINISTRIES through sponsorship, donations, and partnership." />
       </Helmet>
       <div className="min-h-screen bg-white">
       <PageHeader
-        title="Visa & Immigration Guide"
-        subtitle="Simplifying your path to working in Europe"
-        bgImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
+        title="Support & Sponsorship Guide"
+        subtitle="How you can make a lasting difference in Uganda"
+        bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
       />
 
       {/* Introduction Section */}
@@ -94,10 +94,10 @@ const VisaGuide = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Badge variant="new" className="mb-4">Expert Guidance</Badge>
-            <h2 className="font-display text-4xl md:text-5xl mb-6 text-gray-900">Navigating the bureaucracy</h2>
+            <Badge variant="new" className="mb-4">Impact Guidance</Badge>
+            <h2 className="font-display text-4xl md:text-5xl mb-6 text-gray-900">Transforming lives together</h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Europe offers incredible opportunities, but the visa process can be daunting. We break it down into manageable steps and provide direct support for the most common work permits, ensuring a smooth transition for you and your family.
+              We believe that every child deserves a chance to thrive. Your support provides the foundation for success through education, health care, and spiritual nourishment. We've simplified the process so you can focus on the impact you're making.
             </p>
             <div className="space-y-8">
               <div className="flex gap-6">
@@ -105,8 +105,8 @@ const VisaGuide = () => {
                   <Shield className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">Legal Compliance</h3>
-                  <p className="text-gray-600">We ensure all applications meet the strict legal requirements of each specific EU country.</p>
+                  <h3 className="font-bold text-xl mb-2 text-gray-900">Financial Integrity</h3>
+                  <p className="text-gray-600">We are committed to full transparency and accountability in how every dollar is utilized for the children.</p>
                 </div>
               </div>
               <div className="flex gap-6">
@@ -114,8 +114,8 @@ const VisaGuide = () => {
                   <FileCheck className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">Document Verification</h3>
-                  <p className="text-gray-600">Our team meticulously reviews your documents before submission to prevent delays or rejections.</p>
+                  <h3 className="font-bold text-xl mb-2 text-gray-900">Direct Impact</h3>
+                  <p className="text-gray-600">Our local team in Uganda ensures that your support reaches the children and families who need it most, without delay.</p>
                 </div>
               </div>
             </div>
@@ -131,15 +131,15 @@ const VisaGuide = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="relative z-10">
               <h3 className="font-display text-2xl mb-8 flex items-center gap-3 text-gray-900">
-                <CheckSquare className="w-8 h-8 text-primary" /> General Checklist
+                <CheckSquare className="w-8 h-8 text-primary" /> Sponsorship Checklist
               </h3>
               <ul className="space-y-6">
                 {[
-                  "Valid passport with at least 6 months validity",
-                  "Job offer contract from a European employer",
-                  "Proof of professional qualifications (degrees/certs)",
-                  "Health insurance coverage",
-                  "Proof of accommodation"
+                  "Select a child or program to support",
+                  "Choose your monthly or one-time gift amount",
+                  "Complete the secure online sponsorship form",
+                  "Receive your student's profile and welcome kit",
+                  "Start your journey of transformation together"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4 text-gray-700 font-medium">
                     <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-accent-lime/20 flex items-center justify-center">
@@ -151,23 +151,19 @@ const VisaGuide = () => {
               </ul>
               <div className="mt-10 p-4 bg-primary/5 rounded-2xl border border-primary/10 flex gap-4 items-start">
                 <Info className="w-6 h-6 text-primary flex-shrink-0" />
-                <p className="text-sm text-gray-600">Requirements vary significantly by country. Our experts will provide a tailored checklist for your specific destination.</p>
+                <p className="text-sm text-gray-600">Have specific questions about sponsorship? Our donor care team is here to help you every step of the way.</p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <FinancialReadiness />
-      </section>
       {/* Step-by-Step Process */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-gray-50/50">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4">The Process</Badge>
-          <h2 className="font-display text-4xl md:text-5xl mb-6">Step-by-Step Journey</h2>
-          <p className="text-gray-600 text-lg">A clear roadmap from your home country to your new desk in Europe.</p>
+          <Badge variant="outline" className="mb-4">The Journey</Badge>
+          <h2 className="font-display text-4xl md:text-5xl mb-6">Simple Steps to Support</h2>
+          <p className="text-gray-600 text-lg">A clear roadmap from your first gift to seeing lasting change in Uganda.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -200,18 +196,18 @@ const VisaGuide = () => {
         </div>
       </section>
 
-      {/* Visa Types Tabs */}
+      {/* Support Types Tabs */}
       <section className="py-24 px-6 max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl mb-6">Common Visa Types</h2>
-          <p className="text-gray-600 text-lg">Explore the most frequent pathways our candidates take.</p>
+          <h2 className="font-display text-4xl md:text-5xl mb-6">Ways to Give</h2>
+          <p className="text-gray-600 text-lg">Explore the different ways you can support our mission in Uganda.</p>
         </div>
 
         <div className="bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 overflow-hidden">
           <div className="flex flex-col sm:flex-row border-b border-gray-100 bg-gray-50/50">
-            {visaTypes.map((visa, index) => (
+            {supportTypes.map((support, index) => (
               <button
-                key={visa.id}
+                key={support.id}
                 onClick={() => setActiveTab(index)}
                 className={`flex-1 py-6 px-6 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-colors ${
                   activeTab === index
@@ -219,7 +215,7 @@ const VisaGuide = () => {
                     : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50'
                 }`}
               >
-                {visa.icon} {visa.title}
+                {support.icon} {support.title}
               </button>
             ))}
           </div>
@@ -234,8 +230,8 @@ const VisaGuide = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mb-10 text-center">
-                  <h3 className="font-display text-3xl mb-4 text-primary">{visaTypes[activeTab].title}</h3>
-                  <p className="text-gray-600 text-lg max-w-2xl mx-auto">{visaTypes[activeTab].desc}</p>
+                  <h3 className="font-display text-3xl mb-4 text-primary">{supportTypes[activeTab].title}</h3>
+                  <p className="text-gray-600 text-lg max-w-2xl mx-auto">{supportTypes[activeTab].desc}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -244,7 +240,7 @@ const VisaGuide = () => {
                       <Shield className="w-5 h-5 text-accent-lime" /> Benefits
                     </h4>
                     <ul className="space-y-4">
-                      {visaTypes[activeTab].features.map((feature, i) => (
+                      {supportTypes[activeTab].features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
                           <span className="w-2 h-2 bg-primary rounded-full"></span>
                           {feature}
@@ -254,10 +250,10 @@ const VisaGuide = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-6 flex items-center gap-2 text-gray-900 border-b pb-2">
-                      <FileCheck className="w-5 h-5 text-accent-lime" /> Specific Requirements
+                      <FileCheck className="w-5 h-5 text-accent-lime" /> Commitment Details
                     </h4>
                     <ul className="space-y-4">
-                      {visaTypes[activeTab].requirements.map((req, i) => (
+                      {supportTypes[activeTab].requirements.map((req, i) => (
                         <li key={i} className="flex items-start gap-3 text-gray-700 text-sm">
                           <CheckCircle2 className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                           <span>{req}</span>
@@ -276,4 +272,4 @@ const VisaGuide = () => {
   );
 };
 
-export default VisaGuide;
+export default SupportGuide;

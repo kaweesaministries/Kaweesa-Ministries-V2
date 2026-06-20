@@ -10,18 +10,14 @@ import { Routes, Route, Link, useLocation, useNavigate } from "react-router-dom"
 import PageHeader from './components/PageHeader';
 
 import WorldMapDemo from './components/WorldMapDemo';
-import VisaGuide from './VisaGuide';
+import SupportGuide from './SupportGuide';
 import SuccessStories from './SuccessStories';
-import PostJob from './PostJob';
-import TalentSolutions from './TalentSolutions';
-import Pricing from './Pricing';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
 import Contact from './Contact';
-import Relocation from './pages/Relocation';
+import Programs from './pages/Programs';
 import AboutUs from './pages/AboutUs';
 import FoundersCircle from './components/v2/FoundersCircle';
-import FinancialReadiness from "./components/v2/FinancialReadiness";
 import { blogPosts } from './data/blogPosts';
 import {
   Search,
@@ -111,25 +107,11 @@ const Navbar = () => {
     <nav className="absolute top-0 w-full z-50 px-4 py-4 md:px-6 md:py-6 border-b border-white/20">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-4 md:gap-8">
-          <Link className="font-display text-xl md:text-2xl text-white tracking-wide" to="/">OpenDoor</Link>
+          <Link className="font-display text-xl md:text-2xl text-white tracking-wide" to="/">KAWEESA CHILDREN'S MINISTRIES</Link>
           <div className="hidden md:flex gap-8 text-sm font-medium text-white/90 items-center">
-            <Link className="hover:text-white transition-colors" to="/jobs">Find Jobs</Link>
-            <NavDropdown
-              title="Candidates"
-              items={[
-                { label: "Relocation", href: "/relocation" },
-                { label: "Visa Guide", href: "/visa-guide" },
-                { label: "Success Stories", href: "/success-stories" }
-              ]}
-            />
-            <NavDropdown
-              title="Employers"
-              items={[
-                { label: "Post a Job", href: "/post-job" },
-                { label: "Talent Solutions", href: "/talent-solutions" },
-                { label: "Pricing", href: "/pricing" }
-              ]}
-            />
+            <Link className="hover:text-white transition-colors" to="/programs">Our Programs</Link>
+            <Link className="hover:text-white transition-colors" to="/impact">Impact</Link>
+            <Link className="hover:text-white transition-colors" to="/get-involved">Get Involved</Link>
             <Link className="hover:text-white transition-colors" to="/blog">Blog</Link>
             <Link className="hover:text-white transition-colors" to="/about">About Us</Link>
             <Link className="hover:text-white transition-colors" to="/contact">Contact</Link>
@@ -156,57 +138,10 @@ const Navbar = () => {
             className="absolute top-full left-0 w-full bg-primary/95 backdrop-blur-md border-b border-white/10 py-6 px-6 flex flex-col gap-6 md:hidden shadow-2xl overflow-y-auto max-h-[80vh]"
           >
             <div className="flex flex-col gap-2">
-              <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/jobs" onClick={() => setIsMenuOpen(false)}>Find Jobs</Link>
+              <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/programs" onClick={() => setIsMenuOpen(false)}>Our Programs</Link>
 
-              {/* Candidates Section */}
-              <div className="border-b border-white/10 pb-2">
-                <button
-                  onClick={() => toggleSection('candidates')}
-                  className="flex justify-between items-center w-full text-white text-lg font-medium py-2 hover:text-white/70 transition-colors"
-                >
-                  Candidates
-                  <ChevronDown className={`w-5 h-5 transition-transform ${openSection === 'candidates' ? 'rotate-180' : ''}`} />
-                </button>
-                <AnimatePresence>
-                  {openSection === 'candidates' && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden pl-4 flex flex-col gap-3 pb-2"
-                    >
-                      <Link className="text-white/80 text-base hover:text-white" to="/relocation" onClick={() => setIsMenuOpen(false)}>Relocation</Link>
-                      <Link className="text-white/80 text-base hover:text-white" to="/visa-guide" onClick={() => setIsMenuOpen(false)}>Visa Guide</Link>
-                      <Link className="text-white/80 text-base hover:text-white" to="/success-stories" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Employers Section */}
-              <div className="border-b border-white/10 pb-2">
-                <button
-                  onClick={() => toggleSection('employers')}
-                  className="flex justify-between items-center w-full text-white text-lg font-medium py-2 hover:text-white/70 transition-colors"
-                >
-                  Employers
-                  <ChevronDown className={`w-5 h-5 transition-transform ${openSection === 'employers' ? 'rotate-180' : ''}`} />
-                </button>
-                <AnimatePresence>
-                  {openSection === 'employers' && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden pl-4 flex flex-col gap-3 pb-2"
-                    >
-                      <Link className="text-white/80 text-base hover:text-white" to="/post-job" onClick={() => setIsMenuOpen(false)}>Post a Job</Link>
-                      <Link className="text-white/80 text-base hover:text-white" to="/talent-solutions" onClick={() => setIsMenuOpen(false)}>Talent Solutions</Link>
-                      <Link className="text-white/80 text-base hover:text-white" to="/pricing" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/impact" onClick={() => setIsMenuOpen(false)}>Impact</Link>
+              <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/get-involved" onClick={() => setIsMenuOpen(false)}>Get Involved</Link>
 
               <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link>
               <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
@@ -228,34 +163,28 @@ const Navbar = () => {
 
 
 const Hero = () => {
-  const [jobTitle, setJobTitle] = useState("");
-  const [location, setLocation] = useState("");
   const navigate = useNavigate();
-
-  const handleSearch = () => {
-    navigate(`/jobs?search=${encodeURIComponent(jobTitle)}&location=${encodeURIComponent(location)}`);
-  };
 
   return (
     <header className="relative min-h-[85vh] py-28 md:py-32 w-full overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 z-0">
         <img
-          alt="European Cityscape"
+          alt="Children in Uganda"
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&q=80&w=2000"
+          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70"></div>
       </div>
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-32 md:pt-20">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="font-display text-4xl sm:text-5xl md:text-8xl text-white mb-6 leading-tight drop-shadow-lg"
+          className="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-tight drop-shadow-lg"
         >
-          Your Personal <br/>
-          <span className="italic font-light">Bridge to Europe</span>
+          Transforming Lives <br/>
+          <span className="italic font-light">Through Love and Care</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -263,56 +192,31 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-white/90 text-base md:text-xl tracking-wide mb-10 font-medium max-w-2xl mx-auto drop-shadow"
         >
-          We don't just find jobs; we build your new life abroad. Expert guidance for elite talent.
+          We are dedicated to nurturing, protecting, and empowering children in Uganda through comprehensive education, health, and development programs.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="flex flex-col gap-4 max-w-4xl mx-auto"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-2xl md:rounded-full flex flex-col md:flex-row gap-2">
-            <div className="flex-1 relative group">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <Briefcase className="w-5 h-5 text-white/70 group-focus-within:text-white" />
-              </div>
-              <input
-                className="w-full bg-transparent border-none text-white placeholder-white/70 focus:ring-0 pl-12 py-3 rounded-full text-sm outline-none"
-                placeholder="Job title or keywords"
-                type="text"
-                value={jobTitle}
-                onChange={(e) => setJobTitle(e.target.value)}
-              />
-            </div>
-            <div className="w-px bg-white/20 hidden md:block"></div>
-            <div className="flex-1 relative group">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <MapPin className="w-5 h-5 text-white/70 group-focus-within:text-white" />
-              </div>
-              <input
-                className="w-full bg-transparent border-none text-white placeholder-white/70 focus:ring-0 pl-12 py-3 rounded-full text-sm outline-none"
-                placeholder="Country or City"
-                type="text"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              />
-            </div>
-            <button onClick={handleSearch} className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg md:min-w-[140px] flex items-center justify-center gap-2">
-              <Search className="w-4 h-4" />
-              Search Jobs
-            </button>
-          </div>
+          <Link to="/donate" className="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl text-lg min-w-[200px]">
+            Donate Now
+          </Link>
+          <Link to="/sponsor" className="bg-primary text-white border-2 border-white/20 px-10 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all shadow-xl text-lg min-w-[200px]">
+            Sponsor a Child
+          </Link>
           
-          <div className="flex flex-wrap justify-center gap-4 mt-2">
+          <div className="flex flex-wrap justify-center gap-4 w-full mt-4 sm:mt-0 sm:w-auto">
             <a 
-              href="https://wa.me/4915210755401" 
+              href="https://wa.me/256772477774"
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:bg-[#20BE5A] transition-all shadow-xl flex items-center gap-2 group"
             >
               <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              WhatsApp Support
+              Contact Support
             </a>
           </div>
         </motion.div>
@@ -325,23 +229,23 @@ const Values = () => (
   <section className="pt-16 pb-8 px-6 max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
       <h2 className="font-display text-5xl md:text-6xl text-primary leading-tight">
-        Top values <br/> for you
+        Our Core <br/> Programs
       </h2>
       <div className="md:pt-4">
         <p className="text-sm font-semibold tracking-wider text-gray-500 uppercase mb-2">
-          Start Your European Journey
+          Transforming Communities
         </p>
         <p className="text-gray-600 max-w-md leading-relaxed">
-          Enjoy exclusive perks and seamless experiences from day one. We bridge the gap between your talent and Europe's top employers.
+          We implement comprehensive programs designed to address the unique needs of children and families in Uganda, ensuring lasting impact and sustainable development.
         </p>
       </div>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
       {[
-        { icon: PlaneTakeoff, title: "Visa Sponsorship", desc: "Navigating complex bureaucracy so you don't have to. Full legal support for work permits." },
-        { icon: Handshake, title: "Direct Matching", desc: "Connect directly with hiring managers. No middlemen, no hidden steps, instant feedback." },
-        { icon: HomeIcon, title: "Relocation Support", desc: "Housing assistance, bank setup, and cultural onboarding to help you settle in quickly." },
-        { icon: GraduationCap, title: "Career Coaching", desc: "Expert advice on CV tailoring for European standards and interview preparation." }
+        { icon: GraduationCap, title: "Education Support", desc: "Providing school fees, uniforms, and supplies to ensure every child has access to quality education." },
+        { icon: Sparkles, title: "Health & Nutrition", desc: "Ensuring access to medical care, vaccinations, and nutritious food to support healthy development." },
+        { icon: Shield, title: "Child Protection", desc: "Creating safe environments and protecting children from harm, abuse, and exploitation." },
+        { icon: Users, title: "Family Empowerment", desc: "Supporting families through economic initiatives and skills training to build stable homes." }
       ].map((item, i) => (
         <motion.div
           key={i}
@@ -362,45 +266,45 @@ const Values = () => (
   </section>
 );
 
-const JobCards = () => (
+const ProgramCards = () => (
   <section className="pt-8 pb-16 px-6 max-w-7xl mx-auto mb-24">
     <div className="flex flex-col md:flex-row justify-between items-start mb-12">
       <div className="max-w-2xl">
-        <h2 className="font-display text-5xl md:text-6xl text-primary mb-6">Featured Opportunities</h2>
+        <h2 className="font-display text-5xl md:text-6xl text-primary mb-6">Our Impact Programs</h2>
         <p className="text-gray-600 text-lg leading-relaxed">
-          Curated roles for international talent. We handle the connections; you handle the adventure. Explore top-tier positions across Europe with visa sponsorship.
+          Focused initiatives designed to provide comprehensive support for children's growth and development. We believe in holistic care that transforms lives forever.
         </p>
       </div>
-      <Link className="text-sm font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" to="/jobs">VIEW ALL JOBS</Link>
+      <Link className="text-sm font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" to="/programs">VIEW ALL PROGRAMS</Link>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        { title: "Senior React Engineer", location: "Berlin, DE", salary: "€75k - €95k", badge: "VISA SPONSORSHIP", badgeColor: "bg-accent-gold", tag: "Engineering", tagIcon: Briefcase, img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" },
-        { title: "Product Designer", location: "Amsterdam, NL", salary: "€65k - €85k", badge: "RELOCATION", badgeColor: "bg-accent-coral text-white", tag: "Design", tagIcon: MapPin, img: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=800" },
-        { title: "Full Stack Developer", location: "Barcelona, ES", salary: "€55k - €70k", badge: "4.9 RATING", badgeColor: "bg-accent-lime", tag: "Hybrid", tagIcon: HomeIcon, img: "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=800" }
-      ].map((job, i) => (
+        { title: "Education Program", location: "Kampala, Uganda", stats: "95% Enrollment Rate", badge: "SCHOOL SUPPORT", badgeColor: "bg-accent-gold", tag: "Education", tagIcon: GraduationCap, img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" },
+        { title: "Health & Nutrition", location: "Wakiso, Uganda", stats: "78% Malnutrition Reduction", badge: "MEDICAL CARE", badgeColor: "bg-accent-coral text-white", tag: "Health", tagIcon: Sparkles, img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" },
+        { title: "Family Empowerment", location: "Rural Communities", stats: "150+ Families Supported", badge: "ECONOMY", badgeColor: "bg-accent-lime", tag: "Empowerment", tagIcon: Users, img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" }
+      ].map((program, i) => (
         <div key={i} className="group cursor-pointer">
           <div className="aspect-square rounded-2xl overflow-hidden mb-6 relative">
-            {job.badge && (
-              <span className={`absolute top-4 right-4 ${job.badgeColor} text-primary text-[10px] font-bold px-2 py-1 rounded-sm z-10 tracking-wider`}>
-                {job.badge}
+            {program.badge && (
+              <span className={`absolute top-4 right-4 ${program.badgeColor} text-primary text-[10px] font-bold px-2 py-1 rounded-sm z-10 tracking-wider`}>
+                {program.badge}
               </span>
             )}
             <img
-              alt={job.title}
+              alt={program.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              src={job.img}
+              src={program.img}
               referrerPolicy="no-referrer"
             />
             <div className="absolute bottom-4 left-4">
               <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-                <job.tagIcon className="w-3 h-3 text-primary" />
-                <span className="text-primary text-[10px] font-bold tracking-tight">{job.tag}</span>
+                <program.tagIcon className="w-3 h-3 text-primary" />
+                <span className="text-primary text-[10px] font-bold tracking-tight">{program.tag}</span>
               </div>
             </div>
           </div>
-          <h3 className="font-bold text-lg text-primary mb-1">{job.title}</h3>
-          <p className="text-sm text-gray-500 font-medium">{job.location} • <span className="text-gray-400">{job.salary}</span></p>
+          <h3 className="font-bold text-lg text-primary mb-1">{program.title}</h3>
+          <p className="text-sm text-gray-500 font-medium">{program.location} • <span className="text-gray-400">{program.stats}</span></p>
         </div>
       ))}
     </div>
@@ -411,10 +315,10 @@ const Insights = () => (
   <section className="max-w-7xl mx-auto px-6 pb-24">
     <div className="flex flex-col md:flex-row justify-between items-start mb-16 border-b border-gray-100 pb-12">
       <h2 className="font-display text-5xl md:text-6xl text-primary leading-none">
-        Relocation Insights <br/> & Stories
+        Impact Stories <br/> & Updates
       </h2>
       <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase max-w-[240px] mt-6 md:mt-0 leading-relaxed">
-        REAL STORIES FROM PROFESSIONALS WHO MADE THE MOVE, PLUS GUIDES ON VISAS, TAXES, AND CULTURE.
+        REAL STORIES FROM THE CHILDREN AND FAMILIES WE SUPPORT, PLUS UPDATES ON OUR PROGRAMS.
       </p>
     </div>
 
@@ -467,54 +371,54 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 md:col-span-1">
-          <h2 className="font-display text-3xl mb-6">OpenDoor</h2>
+          <h2 className="font-display text-2xl mb-6 uppercase">KAWEESA CHILDREN'S MINISTRIES</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Connecting global talent with European opportunities. Your bridge to a new life and career abroad.
+            Transforming lives through love and care. Dedicated to nurturing and empowering children in Uganda.
           </p>
         </div>
         <div>
-          <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">For Candidates</h4>
+          <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">Our Programs</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li><Link className="hover:text-white transition-colors" to="/jobs">Browse Jobs</Link></li>
-            <li><Link className="hover:text-white transition-colors" to="/visa-guide">Visa Guide</Link></li>
-            <li><Link className="hover:text-white transition-colors" to="/success-stories">Success Stories</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/programs">Education Support</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/programs">Health & Nutrition</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/impact">Our Impact</Link></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">For Employers</h4>
+          <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">Get Involved</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li><Link className="hover:text-white transition-colors" to="/post-job">Post a Job</Link></li>
-            <li><Link className="hover:text-white transition-colors" to="/talent-solutions">Talent Solutions</Link></li>
-            <li><Link className="hover:text-white transition-colors" to="/pricing">Pricing</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/donate">Donate Now</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/sponsor">Sponsor a Child</Link></li>
+            <li><Link className="hover:text-white transition-colors" to="/volunteer">Volunteer</Link></li>
             <li><Link className="hover:text-white transition-colors" to="/blog">Blog</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">Contact</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li>europeopendoor@gmail.com</li>
-            <li>+4915210755401</li>
-            <li>Berlin, Germany</li>
+            <li>info@kaweesaministry.org</li>
+            <li>+256 772 477 774</li>
+            <li>Kampala, Uganda</li>
             <li><Link className="hover:text-white transition-colors" to="/contact">Contact Form</Link></li>
           </ul>
           <div className="flex gap-4 mt-6">
             <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors" href="/" aria-label="Website">
               <Globe className="w-4 h-4" />
             </a>
-            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors" href="mailto:europeopendoor@gmail.com" aria-label="Email">
+            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors" href="mailto:info@kaweesaministry.org" aria-label="Email">
               <Mail className="w-4 h-4" />
             </a>
-            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors" href="tel:+4915210755401">
+            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors" href="tel:+256772477774">
               <Phone className="w-4 h-4" />
             </a>
-            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors" href="https://wa.me/4915210755401" target="_blank" rel="noopener noreferrer">
+            <a className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors" href="https://wa.me/256772477774" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="w-4 h-4" />
             </a>
           </div>
         </div>
       </div>
       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-        <p>© 2024 OpenDoor Europe. All rights reserved.</p>
+        <p>© 2025 KAWEESA CHILDREN'S MINISTRIES. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <a className="hover:text-white" href="#privacy" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
           <a className="hover:text-white" href="#terms" onClick={(e) => e.preventDefault()}>Terms of Service</a>
@@ -527,57 +431,57 @@ const Footer = () => (
 const Partners = () => (
   <section className="py-12 border-b border-gray-100">
     <div className="max-w-7xl mx-auto px-6">
-      <p className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase text-center mb-8">Trusted by industry leaders across Europe</p>
+      <p className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase text-center mb-8">Our Supporters & Community Partners</p>
       <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-        <span className="font-display text-2xl font-bold">VOLVO</span>
-        <span className="font-display text-2xl font-bold">Spotify</span>
-        <span className="font-display text-2xl font-bold">SIEMENS</span>
-        <span className="font-display text-2xl font-bold">zalando</span>
-        <span className="font-display text-2xl font-bold">Klarna.</span>
+        <span className="font-display text-2xl font-bold tracking-tighter">UNITY FUND</span>
+        <span className="font-display text-2xl font-bold tracking-tighter">HOPE GLOBAL</span>
+        <span className="font-display text-2xl font-bold tracking-tighter">UGANDA TRUST</span>
+        <span className="font-display text-2xl font-bold tracking-tighter">KAMPALA AID</span>
+        <span className="font-display text-2xl font-bold tracking-tighter">CHILD FIRST</span>
       </div>
     </div>
   </section>
 );
 
-const CityExplorer = () => {
+const CommunityExplorer = () => {
   const navigate = useNavigate();
   return (
   <section className="py-24 px-6 max-w-7xl mx-auto mb-24">
     <div className="flex flex-col md:flex-row justify-between items-end mb-16">
       <div className="max-w-xl">
-        <h2 className="font-display text-5xl md:text-6xl text-primary mb-6">Explore Destinations</h2>
-        <p className="text-gray-600 text-lg">Discover the best cities for your next career move based on real-time data and expat feedback.</p>
+        <h2 className="font-display text-5xl md:text-6xl text-primary mb-6">Communities We Serve</h2>
+        <p className="text-gray-600 text-lg">We work across various regions in Uganda, bringing hope and support to both urban and rural communities.</p>
       </div>
-      <Link className="text-sm font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" to="/jobs">VIEW ALL CITIES</Link>
+      <Link className="text-sm font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" to="/programs">VIEW ALL COMMUNITIES</Link>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        { name: "Berlin", country: "Germany", jobs: "1,240+", cost: "Moderate", img: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=800" },
-        { name: "Amsterdam", country: "Netherlands", jobs: "850+", cost: "High", img: "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&q=80&w=800" },
-        { name: "Stockholm", country: "Sweden", jobs: "620+", cost: "High", img: "https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&q=80&w=800" }
-      ].map((city, i) => (
+        { name: "Kampala", country: "Uganda", children: "200+", focus: "Urban Youth", img: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?auto=format&fit=crop&q=80&w=800" },
+        { name: "Wakiso", country: "Uganda", children: "150+", focus: "Education", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=800" },
+        { name: "Luweero", country: "Uganda", children: "100+", focus: "Health", img: "https://images.unsplash.com/photo-1524062731294-1735db9341a2?auto=format&fit=crop&q=80&w=800" }
+      ].map((community, i) => (
         <motion.div
           key={i}
           whileHover={{ y: -10 }}
           className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
-          onClick={() => navigate('/jobs?location=' + encodeURIComponent(city.name))}
+          onClick={() => navigate('/programs')}
         >
           <img
-            alt={city.name}
+            alt={community.name}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            src={city.img}
+            src={community.img}
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           <div className="absolute bottom-8 left-8 right-8">
-            <p className="text-white/70 text-xs font-bold tracking-widest uppercase mb-1">{city.country}</p>
-            <h3 className="text-white font-display text-4xl mb-4">{city.name}</h3>
+            <p className="text-white/70 text-xs font-bold tracking-widest uppercase mb-1">{community.country}</p>
+            <h3 className="text-white font-display text-4xl mb-4">{community.name}</h3>
             <div className="flex gap-4">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full">
-                <p className="text-white text-[10px] font-bold">{city.jobs} Jobs</p>
+                <p className="text-white text-[10px] font-bold">{community.children} Children</p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full">
-                <p className="text-white text-[10px] font-bold">{city.cost} Cost</p>
+                <p className="text-white text-[10px] font-bold">{community.focus}</p>
               </div>
             </div>
           </div>
@@ -608,8 +512,8 @@ const Newsletter = () => {
           <div className="absolute bottom-10 right-10 w-96 h-96 border-4 border-primary rounded-full"></div>
         </div>
         <div className="relative z-10 max-w-2xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl text-primary mb-8">Stay ahead of the curve</h2>
-          <p className="text-primary/70 text-lg mb-12">Get weekly insights on the European job market, visa updates, and exclusive relocation guides delivered to your inbox.</p>
+          <h2 className="font-display text-5xl md:text-6xl text-primary mb-8">Join Our Newsletter</h2>
+          <p className="text-primary/70 text-lg mb-12">Stay updated with our latest impact stories, program developments, and news from our community in Uganda.</p>
 
           {isSubscribed ? (
             <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-sm">
@@ -649,9 +553,9 @@ const FAQ = () => (
     <h2 className="font-display text-4xl mb-12 text-center">Common questions</h2>
     <div className="space-y-4">
       {[
-        { q: "Do I need a visa before applying?", a: "Not necessarily. Many of our partner companies offer visa sponsorship. We'll guide you through the requirements for each role." },
-        { q: "Is OpenDoor free for candidates?", a: "Yes! Our services are completely free for job seekers. We are paid by the companies that hire you." },
-        { q: "Which countries do you cover?", a: "We currently focus on major tech hubs in Germany, Netherlands, Sweden, Spain, and France, but we're expanding rapidly." }
+        { q: "How can I sponsor a child?", a: "You can choose a child from our waiting list and commit to a monthly donation of $35, which covers their education, health care, and basic needs." },
+        { q: "Where does my donation go?", a: "100% of child sponsorship donations go directly to the care and support of the child. Administrative costs are covered by separate general grants." },
+        { q: "Can I visit the ministry in Uganda?", a: "Yes! We welcome supporters to visit our centers in Kampala and Wakiso. Please contact our team to arrange a visit." }
       ].map((item, i) => (
         <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-100">
           <h3 className="font-bold text-lg mb-2">{item.q}</h3>
@@ -668,21 +572,17 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>OpenDoor - Relocate & Work in Europe</title>
-        <meta name="description" content="OpenDoor connects top international talent with leading European employers. Find jobs with visa sponsorship." />
+        <title>KAWEESA CHILDREN'S MINISTRIES - Transforming Lives Through Love and Care</title>
+        <meta name="description" content="KAWEESA CHILDREN'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs." />
       </Helmet>
       <Hero />
       <Partners />
       <Values />
 
       <FoundersCircle />
-      <JobCards />
-      <CityExplorer />
+      <ProgramCards />
+      <CommunityExplorer />
       <CombinedFeaturedSection />
-
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <FinancialReadiness />
-      </section>
 
       <Insights />
       <Newsletter />
@@ -691,361 +591,6 @@ const Home = () => {
   );
 };
 
-const getJobRole = (title: string) => {
-  const t = title.toLowerCase();
-  if (t.includes('engineer') || t.includes('developer')) return 'Engineering';
-  if (t.includes('designer')) return 'Design';
-  if (t.includes('product')) return 'Product';
-  if (t.includes('data')) return 'Data';
-  if (t.includes('marketing')) return 'Marketing';
-  return 'Other';
-};
-
-const JOBS = [
-  { title: "Senior React Engineer", company: "TechCorp GmbH", location: "Berlin, Germany", salary: "€75k - €95k", tags: ['Visa Sponsorship', 'Hybrid', 'React'], image: "https://loremflickr.com/200/200/software?lock=1" },
-  { title: "Product Designer", company: "Creative Studio", location: "Amsterdam, Netherlands", salary: "€65k - €85k", tags: ['Relocation', 'On-site', 'Figma'], image: "https://loremflickr.com/200/200/design?lock=2" },
-  { title: "Backend Developer (Go)", company: "FinTech AB", location: "Stockholm, Sweden", salary: "€70k - €90k", tags: ['Visa Sponsorship', 'Remote', 'Go'], image: "https://loremflickr.com/200/200/coding?lock=3" },
-  { title: "Data Scientist", company: "AI Solutions", location: "Paris, France", salary: "€60k - €80k", tags: ['Visa Sponsorship', 'Python', 'ML'], image: "https://loremflickr.com/200/200/data?lock=4" },
-  { title: "DevOps Engineer", company: "Cloud Systems", location: "Barcelona, Spain", salary: "€55k - €75k", tags: ['Relocation', 'AWS', 'K8s'], image: "https://loremflickr.com/200/200/server?lock=5" },
-  { title: "Frontend Lead", company: "E-commerce Inc", location: "Berlin, Germany", salary: "€85k - €110k", tags: ['Visa Sponsorship', 'Vue.js', 'Lead'], image: "https://loremflickr.com/200/200/frontend?lock=6" },
-  { title: "UX Researcher", company: "UserFirst", location: "Amsterdam, Netherlands", salary: "€55k - €75k", tags: ['Relocation', 'Research'], image: "https://loremflickr.com/200/200/research?lock=7" },
-  { title: "Cloud Architect", company: "Enterprise IT", location: "Stockholm, Sweden", salary: "€80k - €100k", tags: ['Relocation Pkg', 'On-site', 'AWS'], image: "https://loremflickr.com/200/200/cloud?lock=8" },
-  { title: "Janitor", company: "CleanSpace GmbH", location: "Berlin, Germany", salary: "€28k - €32k", tags: ['Visa Sponsorship', 'On-site'], image: "https://loremflickr.com/200/200/janitor?lock=9" },
-  { title: "Housekeeper", company: "Grand Hotel", location: "Paris, France", salary: "€26k - €30k", tags: ['Accommodation', 'Shift Work'], image: "https://loremflickr.com/200/200/housekeeper?lock=10" },
-  { title: "Room Attendant", company: "Luxury Stay", location: "Rome, Italy", salary: "€24k - €28k", tags: ['Tips', 'Full-time'], image: "https://loremflickr.com/200/200/hotel?lock=11" },
-  { title: "Office Cleaner", company: "CorpClean", location: "London, UK", salary: "£22k - £26k", tags: ['Part-time', 'Evening'], image: "https://loremflickr.com/200/200/office,cleaner?lock=12" },
-  { title: "Laundry Attendant", company: "PureWash", location: "Munich, Germany", salary: "€25k - €29k", tags: ['Training Provided', 'Day Shift'], image: "https://loremflickr.com/200/200/laundry?lock=13" },
-  { title: "Kitchen Steward", company: "Gourmet Bistro", location: "Lyon, France", salary: "€27k - €31k", tags: ['Meals Included', 'Busy'], image: "https://loremflickr.com/200/200/kitchen?lock=14" },
-  { title: "Dishwasher", company: "City Restaurant", location: "Barcelona, Spain", salary: "€23k - €26k", tags: ['Entry Level', 'Urgent'], image: "https://loremflickr.com/200/200/dishwasher?lock=15" },
-  { title: "Waste Collector", company: "EcoServices", location: "Amsterdam, Netherlands", salary: "€30k - €36k", tags: ['Union', 'Early Shift'], image: "https://loremflickr.com/200/200/waste?lock=16" },
-  { title: "Sanitation Worker", company: "Public Works", location: "Brussels, Belgium", salary: "€29k - €34k", tags: ['Government', 'Benefits'], image: "https://loremflickr.com/200/200/sanitation?lock=17" },
-  { title: "Groundskeeper", company: "University Campus", location: "Dublin, Ireland", salary: "€28k - €33k", tags: ['Outdoor', 'Seasonal'], image: "https://loremflickr.com/200/200/groundskeeper?lock=18" },
-  { title: "Gardener", company: "Royal Parks", location: "London, UK", salary: "£26k - £32k", tags: ['Creative', 'Outdoor'], image: "https://loremflickr.com/200/200/garden?lock=19" },
-  { title: "Car Wash Attendant", company: "Sparkle Auto", location: "Milan, Italy", salary: "€22k - €25k", tags: ['Tips', 'Flexible'], image: "https://loremflickr.com/200/200/carwash?lock=20" },
-  { title: "Maintenance Assistant", company: "Property Fix", location: "Berlin, Germany", salary: "€32k - €38k", tags: ['Visa Sponsorship', 'Tools Provided'], image: "https://loremflickr.com/200/200/maintenance?lock=21" },
-  { title: "Facility Attendant", company: "Sports Complex", location: "Madrid, Spain", salary: "€25k - €29k", tags: ['Weekend', 'Gym Access'], image: "https://loremflickr.com/200/200/facility?lock=22" },
-  { title: "Public Area Attendant", company: "Shopping Mall", location: "Warsaw, Poland", salary: "PLN 40k - 50k", tags: ['Shift Work', 'Indoor'], image: "https://loremflickr.com/200/200/cleaner?lock=23" },
-  { title: "Building Caretaker", company: "Residential Block", location: "Vienna, Austria", salary: "€30k - €35k", tags: ['Accommodation', 'Full-time'], image: "https://loremflickr.com/200/200/building?lock=24" },
-  { title: "Pest Control Assistant", company: "NoPests", location: "Lisbon, Portugal", salary: "€26k - €31k", tags: ['Training', 'Travel'], image: "https://loremflickr.com/200/200/pestcontrol?lock=25" },
-  { title: "Street Sweeper", company: "City Council", location: "Prague, Czechia", salary: "CZK 500k - 600k", tags: ['Public Sector', 'Pension'], image: "https://loremflickr.com/200/200/street?lock=26" },
-  { title: "Factory Cleaner", company: "AutoPlant", location: "Stuttgart, Germany", salary: "€30k - €36k", tags: ['Night Shift', 'Bonus'], image: "https://loremflickr.com/200/200/factory?lock=27" },
-  { title: "Hospital Cleaner", company: "Central Hospital", location: "Zurich, Switzerland", salary: "CHF 50k - 60k", tags: ['Healthcare', 'Sterile'], image: "https://loremflickr.com/200/200/hospital?lock=28" },
-].map(job => ({ ...job, role: getJobRole(job.title) }));
-
-
-const getJobIcon = (title: string) => {
-  const lowerTitle = title.toLowerCase();
-
-  if (lowerTitle.includes('engineer') || lowerTitle.includes('developer') || lowerTitle.includes('architect') || lowerTitle.includes('stack')) {
-    return <Code2 className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('designer')) {
-    return <PenTool className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('data') || lowerTitle.includes('analyst')) {
-    return <Database className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('cloud') || lowerTitle.includes('devops')) {
-    return <Cloud className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('cleaner') || lowerTitle.includes('janitor') || lowerTitle.includes('housekeeper') || lowerTitle.includes('attendant') || lowerTitle.includes('sweeper') || lowerTitle.includes('caretaker') || lowerTitle.includes('waste') || lowerTitle.includes('sanitation')) {
-    return <Sparkles className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('kitchen') || lowerTitle.includes('dishwasher') || lowerTitle.includes('steward') || lowerTitle.includes('cook')) {
-    return <Utensils className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('gardener') || lowerTitle.includes('groundskeeper')) {
-    return <Sprout className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('driver') || lowerTitle.includes('mechanic') || lowerTitle.includes('auto') || lowerTitle.includes('car')) {
-    return <Car className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('maintenance') || lowerTitle.includes('fix')) {
-    return <Wrench className="w-8 h-8 text-primary" />;
-  }
-  if (lowerTitle.includes('security')) {
-    return <Shield className="w-8 h-8 text-primary" />;
-  }
-
-  return <Briefcase className="w-8 h-8 text-primary" />;
-};
-
-const FindJobs = () => {
-
-  const [searchTerm, setSearchTerm] = useState("");
-  const [locationTerm, setLocationTerm] = useState("");
-  const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [visaSupport, setVisaSupport] = useState(false);
-  const [relocation, setRelocation] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const search = params.get('search');
-    const loc = params.get('location');
-
-    if (search) setSearchTerm(search);
-    if (loc) setLocationTerm(loc);
-  }, [location.search]);
-
-  const toggleRole = (role: string) => {
-    setSelectedRoles(prev =>
-      prev.includes(role) ? prev.filter(r => r !== role) : [...prev, role]
-    );
-  };
-
-  const toggleLocation = (loc: string) => {
-    setSelectedLocations(prev =>
-      prev.includes(loc) ? prev.filter(l => l !== loc) : [...prev, loc]
-    );
-  };
-
-  const clearFilters = () => {
-    setSearchTerm("");
-    setLocationTerm("");
-    setSelectedRoles([]);
-    setSelectedLocations([]);
-    setVisaSupport(false);
-    setRelocation(false);
-  };
-
-  // ⚡ Bolt: Memoize the filtered jobs to prevent O(N) recalculations on every render unless filter states change
-  const filteredJobs = React.useMemo(() => JOBS.filter(job => {
-    // Search Term Filter
-    const matchesSearch = searchTerm === "" ||
-      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      job.company.toLowerCase().includes(searchTerm.toLowerCase());
-
-    // Location Term Filter (from Hero)
-    const matchesLocationTerm = locationTerm === "" ||
-      job.location.toLowerCase().includes(locationTerm.toLowerCase());
-
-    // Role Filter
-    const matchesRole = selectedRoles.length === 0 || selectedRoles.includes(job.role);
-
-    // Location Checkbox Filter
-    const matchesLocationCheckbox = selectedLocations.length === 0 ||
-      selectedLocations.some(loc => job.location.includes(loc));
-
-    // Visa & Relocation
-    const matchesVisa = !visaSupport || job.tags.some(t => t.toLowerCase().includes('visa'));
-    const matchesRelocation = !relocation || job.tags.some(t => t.toLowerCase().includes('relocation'));
-
-    return matchesSearch && matchesLocationTerm && matchesRole && matchesLocationCheckbox && matchesVisa && matchesRelocation;
-  }), [searchTerm, locationTerm, selectedRoles, selectedLocations, visaSupport, relocation]);
-
-  return (
-    <>
-      <Helmet>
-        <title>Find Tech Jobs in Europe with Visa Sponsorship | OpenDoor</title>
-        <meta name="description" content="Search for software engineering, IT, and tech jobs in Europe offering visa sponsorship and relocation assistance." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-      <PageHeader
-        title="Find Your Next Role"
-        subtitle="Explore opportunities across Europe with visa sponsorship"
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-      />
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="w-full md:w-64 flex-shrink-0">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 sticky top-24">
-              <div className="flex justify-between items-center mb-6">
-                 <h3 className="font-bold text-lg flex items-center gap-2">
-                  <Filter className="w-5 h-5" /> Filters
-                </h3>
-                <button onClick={clearFilters} className="text-xs font-bold text-primary hover:underline">Clear All</button>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-sm mb-3">Role Type</h4>
-                  <div className="space-y-2">
-                    {['Engineering', 'Design', 'Product', 'Data', 'Marketing'].map(role => (
-                      <label key={role} className="flex items-center gap-2 cursor-pointer group">
-                        <div className="relative flex items-center">
-                          <input
-                            type="checkbox"
-                            className="peer h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/20"
-                            checked={selectedRoles.includes(role)}
-                            onChange={() => toggleRole(role)}
-                          />
-                        </div>
-                        <span className="text-sm text-gray-600 group-hover:text-primary transition-colors">{role}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm mb-3">Location</h4>
-                  <div className="space-y-2">
-                    {['Germany', 'Netherlands', 'Sweden', 'Spain', 'France'].map(loc => (
-                      <label key={loc} className="flex items-center gap-2 cursor-pointer group">
-                         <input
-                            type="checkbox"
-                            className="peer h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/20"
-                            checked={selectedLocations.includes(loc)}
-                            onChange={() => toggleLocation(loc)}
-                          />
-                        <span className="text-sm text-gray-600 group-hover:text-primary transition-colors">{loc}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm mb-3">Visa Support</h4>
-                  <label className="flex items-center gap-2 cursor-pointer group">
-                    <input
-                      type="checkbox"
-                      className="peer h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/20"
-                      checked={visaSupport}
-                      onChange={(e) => setVisaSupport(e.target.checked)}
-                    />
-                    <span className="text-sm text-gray-600 group-hover:text-primary transition-colors">Visa Sponsorship</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer mt-2 group">
-                    <input
-                      type="checkbox"
-                      className="peer h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/20"
-                      checked={relocation}
-                      onChange={(e) => setRelocation(e.target.checked)}
-                    />
-                    <span className="text-sm text-gray-600 group-hover:text-primary transition-colors">Relocation Package</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-1">
-            <div className="mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search by job title, company, or keywords..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm transition-shadow"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {filteredJobs.length > 0 ? (
-                filteredJobs.map((job, i) => (
-                  <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all cursor-pointer flex flex-col sm:flex-row gap-6 items-start sm:items-center group">
-                    <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/5 transition-colors">
-                      {getJobIcon(job.title)}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-xl text-primary mb-2 group-hover:text-primary/80 transition-colors">{job.title}</h3>
-                      <p className="text-sm text-gray-500 mb-4">{job.company} • {job.location} • {job.salary}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {job.tags.map(tag => (
-                          <span key={tag} className={`${tag.toLowerCase().includes('visa') || tag.toLowerCase().includes('relocation') ? 'bg-accent-lime/20 text-primary' : 'bg-gray-100 text-gray-600'} px-3 py-1 rounded-full text-xs font-bold`}>
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <a
-                      href={`https://wa.me/4915210755401?text=Hi,%20I'm%20interested%20in%20applying%20for%20the%20${encodeURIComponent(job.title)}%20position.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full sm:w-auto border-2 border-primary text-primary px-6 py-2 rounded-full font-bold hover:bg-primary hover:text-white transition-colors text-center inline-block">
-                      Apply
-                    </a>
-                  </div>
-                ))
-              ) : (
-                <div className="bg-white rounded-2xl p-12 text-center border border-gray-100">
-                  <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Search className="w-10 h-10 text-gray-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">No jobs found</h3>
-                  <p className="text-gray-500 mb-6">We couldn't find any positions matching your current filters.</p>
-                  <button onClick={clearFilters} className="text-primary font-bold hover:underline">Clear all filters</button>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    </>
-  );
-};
-
-const Employers = () => {
-
-
-  return (
-    <>
-      <Helmet>
-        <title>Hire International Talent - OpenDoor Employers</title>
-        <meta name="description" content="Partner with OpenDoor to hire skilled international professionals. We handle sourcing, vetting, and relocation." />
-      </Helmet>
-      <div className="min-h-screen bg-white">
-    <PageHeader
-      title="Hire Global Talent"
-      subtitle="Access a curated pool of pre-vetted international professionals"
-      bgImage="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=2000"
-    />
-    <section className="py-24 px-6 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <Users className="w-8 h-8" />
-          </div>
-          <h3 className="font-bold text-xl mb-4">Pre-vetted Candidates</h3>
-          <p className="text-gray-600">Every candidate is screened for technical skills, cultural fit, and English proficiency.</p>
-        </div>
-        <div className="text-center">
-          <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <FileText className="w-8 h-8" />
-          </div>
-          <h3 className="font-bold text-xl mb-4">Visa Support</h3>
-          <p className="text-gray-600">We handle the entire visa and relocation process, ensuring a smooth transition.</p>
-        </div>
-        <div className="text-center">
-          <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-8 h-8" />
-          </div>
-          <h3 className="font-bold text-xl mb-4">Guaranteed Match</h3>
-          <p className="text-gray-600">If a hire doesn't work out within the first 90 days, we'll find a replacement for free.</p>
-        </div>
-      </div>
-
-      <div className="bg-gray-50 rounded-[3rem] p-12 text-center">
-        <h2 className="font-display text-4xl mb-6">Ready to expand your team?</h2>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Join hundreds of European companies hiring top international talent through OpenDoor.</p>
-        <Link to="/contact" className="bg-primary text-white px-10 py-4 rounded-full font-bold hover:bg-primary/90 transition-colors inline-block">
-          Schedule a Demo
-        </Link>
-      </div>
-    </section>
-  </div>
-    </>
-  );
-};
-
-// Content moved to src/pages/AboutUs.tsx and src/pages/Relocation.tsx
-
-const PlaceholderPage = ({ title }: { title: string }) => (
-  <div className="min-h-screen bg-white">
-    <PageHeader
-      title={title}
-      subtitle="Coming soon"
-      bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-    />
-    <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="font-display text-4xl mb-8">We are working on this page.</h2>
-      <p className="text-gray-600 text-lg">Please check back later.</p>
-    </section>
-  </div>
-);
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -1064,15 +609,12 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/jobs" element={<FindJobs />} />
-        <Route path="/employers" element={<Employers />} />
-        <Route path="/relocation" element={<Relocation />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/impact" element={<Programs />} />
+        <Route path="/get-involved" element={<SupportGuide />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/visa-guide" element={<VisaGuide />} />
+        <Route path="/support-guide" element={<SupportGuide />} />
         <Route path="/success-stories" element={<SuccessStories />} />
-        <Route path="/post-job" element={<PostJob />} />
-        <Route path="/talent-solutions" element={<TalentSolutions />} />
-        <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />

@@ -17,7 +17,7 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | OpenDoor Blog</title>
+        <title>{post.title} | KCM Blog</title>
         <meta name="description" content={post.metaDescription} />
       </Helmet>
     <div className="min-h-screen bg-white">

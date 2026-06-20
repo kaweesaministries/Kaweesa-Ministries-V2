@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils"
 
 export default function CombinedFeaturedSection() {
   const featuredCasestudy = {
-    logo: '/opendoor_dark.png',
-    company: 'OpenDoor',
-    tags: 'Success Story',
-    title: 'How we helped 500+ engineers',
-    subtitle: 'relocate to Berlin, Amsterdam, and Stockholm with full visa sponsorship and housing support.',
+    logo: '/kcm_logo.png',
+    company: 'KAWEESA CHILDREN\'S MINISTRIES',
+    tags: 'Impact Story',
+    title: 'Nurturing 90+ Vulnerable Children',
+    subtitle: 'providing education, health care, and family empowerment in Uganda\'s most underserved communities.',
   }
 
   return (
@@ -25,17 +25,17 @@ export default function CombinedFeaturedSection() {
           <div>
             <div className="flex items-center gap-2 text-sm text-gray-500 mb-6 font-semibold tracking-wider uppercase">
               <MapPin className="w-4 h-4 text-accent-lime" />
-              Global Talent Flow
+              Our Outreach
             </div>
             <h3 className="text-3xl font-display text-primary dark:text-white mb-4">
-              Connecting worldwide talent to European hubs.{" "}
-              <span className="text-gray-400">Real-time visa applications and relocation tracking across the globe.</span>
+              Impacting lives across Uganda.{" "}
+              <span className="text-gray-400">Real-time support and development tracking for every child in our care.</span>
             </h3>
           </div>
 
           <div className="relative mt-8">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-primary dark:bg-white text-white dark:text-primary rounded-full text-xs font-bold shadow-xl flex items-center gap-2">
-              🌍 Active relocation from Brazil
+              🌍 Active support in Kampala
             </div>
             <Map />
           </div>
@@ -53,7 +53,7 @@ export default function CombinedFeaturedSection() {
             </h3>
           </div>
           <div className="flex justify-center items-center w-full bg-gray-50 dark:bg-surface-dark rounded-3xl p-8 border border-gray-100 dark:border-white/5">
-            <OpenDoorFeaturedMessageCard />
+            <NGOFeaturedMessageCard />
           </div>
         </div>
 
@@ -61,11 +61,11 @@ export default function CombinedFeaturedSection() {
         <div className="rounded-none border border-gray-100 dark:border-white/10 bg-gray-50 dark:bg-surface-dark p-8 space-y-6 border-t-0">
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-6 font-semibold tracking-wider uppercase">
             <Activity className="w-4 h-4 text-accent-coral" />
-            Market Insights
+            Impact Statistics
           </div>
           <h3 className="text-3xl font-display text-primary dark:text-white mb-4">
-            Relocation trends for 2024.{" "}
-            <span className="text-gray-400">Monthly growth in successful placements across European tech sectors.</span>
+            Growth in support for 2024.{" "}
+            <span className="text-gray-400">Monthly increase in children enrolled in our education and health programs.</span>
           </h3>
           <div className="h-64 mt-8">
             <MonitoringChart />
@@ -76,17 +76,17 @@ export default function CombinedFeaturedSection() {
         <div className="grid sm:grid-cols-2 rounded-none bg-white dark:bg-primary border-t-0">
           <FeatureCard
             icon={<Files className="w-4 h-4 text-accent-lime" />}
-            image="/relocation-guide.png"
-            title="Relocation Guides"
-            subtitle="Expert knowledge."
-            description="Deep dives into taxes, healthcare, and culture for every major city."
+            image="/education-guide.png"
+            title="Education Programs"
+            subtitle="Access to learning."
+            description="Ensuring every child has the fees, uniforms, and supplies needed to excel in school."
           />
           <FeatureCard
             icon={<Flower className="w-4 h-4 text-accent-gold" />}
-            image="/visa-support.png"
-            title="Visa Assistance"
-            subtitle="Paperwork handled."
-            description="Our legal experts manage the entire sponsorship process for you."
+            image="/health-support.png"
+            title="Health Initiatives"
+            subtitle="Comprehensive care."
+            description="Providing regular medical checkups, vaccinations, and nutrition support for all children."
           />
         </div>
       </div>
@@ -184,7 +184,7 @@ function MonitoringChart() {
           strokeWidth={3}
           fillOpacity={1} 
           fill="url(#colorTech)" 
-          name="Tech Placements"
+          name="Education Support"
         />
         <Area 
           type="monotone" 
@@ -193,7 +193,7 @@ function MonitoringChart() {
           strokeWidth={3}
           fillOpacity={1} 
           fill="url(#colorNonTech)" 
-          name="Other Sectors"
+          name="Health Programs"
         />
       </AreaChart>
     </ResponsiveContainer>
@@ -210,38 +210,38 @@ interface Message {
 
 const messages: Message[] = [
     {
-      title: "Visa Sponsorship",
+      title: "New Sponsorship",
       time: "2m ago",
-      content: "New Senior React Role in Berlin with full sponsorship.",
+      content: "A new child from Wakiso has joined our education program.",
       color: "from-accent-lime to-emerald-500",
     },
     {
-      title: "Success Story",
+      title: "Health Update",
       time: "5m ago",
-      content: "Carlos successfully relocated to Amsterdam!",
+      content: "Successfully completed the monthly health screening for 45 children.",
       color: "from-accent-gold to-orange-500",
     },
     {
-      title: "Relocation Guide",
+      title: "Education Impact",
       time: "12m ago",
-      content: "Updated 2024 guide for Stockholm housing market.",
+      content: "All Primary 7 candidates passed their mock exams with high grades.",
       color: "from-accent-coral to-pink-500",
     },
     {
-      title: "Direct Interview",
+      title: "Community Outreach",
       time: "20m ago",
-      content: "Interview request from Volvo for Cloud Engineer.",
+      content: "Distributed 50 nutrition packs to families in Kampala.",
       color: "from-blue-400 to-indigo-600",
     },
     {
-      title: "Profile Boost",
+      title: "Impact Milestone",
       time: "45m ago",
-      content: "Your profile is now featured to top 50 employers.",
+      content: "We've reached our goal of 90+ children supported this year!",
       color: "from-purple-400 to-purple-600",
     },
   ];
 
-const OpenDoorFeaturedMessageCard = () => {
+const NGOFeaturedMessageCard = () => {
   return (
     <div className="w-full max-w-sm h-[320px] bg-white dark:bg-surface-dark p-4 overflow-hidden relative rounded-2xl">
       {/* Fade shadow overlay */}

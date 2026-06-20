@@ -9,35 +9,35 @@ import {
 
 const items = [
   {
-    img: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1170&auto=format&fit=crop",
-    title: 'Berlin, Germany',
-    desc: 'A thriving tech hub with a vibrant international community, offering countless opportunities for software engineers and IT professionals.',
-    sliderName: 'berlin',
+    img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1170&auto=format&fit=crop",
+    title: 'Education',
+    desc: 'Empowering children with quality education, providing school fees, uniforms, and essential learning materials.',
+    sliderName: 'education',
   },
   {
-    img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1170&auto=format&fit=crop",
-    title: 'Stockholm, Sweden',
-    desc: 'Known for its work-life balance and innovative tech scene, making it a top destination for global talent.',
-    sliderName: 'stockholm',
+    img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1170&auto=format&fit=crop",
+    title: 'Health Care',
+    desc: 'Ensuring access to medical care, nutritious food, and clean water for healthy development.',
+    sliderName: 'health',
   },
   {
-    img: "https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?q=80&w=1170&auto=format&fit=crop",
-    title: 'Amsterdam, Netherlands',
-    desc: 'A picturesque city with a booming startup ecosystem and excellent English proficiency.',
-    sliderName: 'amsterdam',
+    img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1170&auto=format&fit=crop",
+    title: 'Protection',
+    desc: 'Creating safe environments where children are protected from harm and their rights are respected.',
+    sliderName: 'protection',
   },
   {
-    img: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=1170&auto=format&fit=crop",
-    title: 'Munich, Germany',
-    sliderName: 'munich',
-    desc: 'Home to global engineering giants and a strong economy, perfect for advancing your career.',
+    img: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1170&auto=format&fit=crop",
+    title: 'Empowerment',
+    desc: 'Supporting families and communities through economic initiatives and vocational training.',
+    sliderName: 'empowerment',
   },
 ];
 
 export default function ProgressiveCarouselDemo() {
   return (
     <div className="max-w-5xl mx-auto my-12 relative w-full overflow-hidden rounded-3xl">
-      <ProgressSlider vertical={false} activeSlider='berlin'>
+      <ProgressSlider vertical={false} activeSlider='education'>
         <SliderContent>
           {items.map((item, index) => (
             <SliderWrapper key={index} value={item?.sliderName}>

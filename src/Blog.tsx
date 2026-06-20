@@ -2,51 +2,52 @@ import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import PageHeader from './components/PageHeader';
 import { Link } from 'react-router-dom';
-import { FileText, Search } from 'lucide-react';
+import { FileText, Search, ArrowRight } from 'lucide-react';
 import { blogPosts } from './data/blogPosts';
+
 const Blog = () => {
 
-  const [selectedCountry, setSelectedCountry] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
   // ⚡ Bolt: Memoize the filtered posts to prevent O(N) recalculations on every render
   const filteredPosts = useMemo(() => blogPosts.filter(post => {
-    const matchesCountry = selectedCountry === 'All' || post.country === selectedCountry;
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           post.metaDescription.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCountry && matchesSearch;
-  }), [selectedCountry, searchQuery]);
+    return matchesCategory && matchesSearch;
+  }), [selectedCategory, searchQuery]);
 
-  const countries = ['All', 'Germany', 'United Kingdom', 'Netherlands', 'Spain', 'Sweden'];
+  const categories = ['All', 'Education', 'Health', 'Protection', 'Empowerment'];
 
   return (
     <>
       <Helmet>
-        <title>Relocation & Career Blog - OpenDoor Europe</title>
-        <meta name="description" content="Read our latest articles on working in Europe, visa guides, tech career tips, and relocation success stories." />
+        <title>Impact Blog - KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Read our latest stories of impact, program updates, and news from our communities in Uganda." />
       </Helmet>
       <div className="min-h-screen bg-white">
       <PageHeader
-        title="Blog & Insights"
-        subtitle="Guides, articles, and tools for your international career"
-        bgImage="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=2000"
+        title="Impact & Insights"
+        subtitle="Stories and updates from our mission in Uganda"
+        bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
       />
       <section className="py-24 px-6 max-w-7xl mx-auto">
 
         {/* Filter & Search Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-            {countries.map(country => (
+            {categories.map(category => (
               <button
-                key={country}
-                onClick={() => setSelectedCountry(country)}
+                key={category}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
-                  selectedCountry === country
+                  selectedCategory === category
                     ? 'bg-primary text-white shadow-lg scale-105'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                {country}
+                {category}
               </button>
             ))}
           </div>
@@ -66,7 +67,7 @@ const Blog = () => {
         <div className="flex flex-col md:flex-row gap-12">
           <div className="w-full md:w-2/3 space-y-12">
             <h2 className="font-display text-3xl mb-8">
-              {selectedCountry === 'All' ? 'Latest Articles' : `Articles for ${selectedCountry}`}
+              {selectedCategory === 'All' ? 'Latest Stories' : `Stories in ${selectedCategory}`}
             </h2>
 
             {filteredPosts.length > 0 ? (
@@ -86,17 +87,18 @@ const Blog = () => {
                     </div>
                     <h3 className="font-bold text-2xl mb-3 group-hover:text-primary transition-colors">{article.title}</h3>
                     <p className="text-gray-600 mb-4 line-clamp-2">{article.metaDescription}</p>
-                    <Link to={`/blog/${article.slug}`} className="text-primary font-bold text-sm uppercase tracking-wider hover:opacity-70 inline-flex items-center gap-2">
+                    <Link to={`/blog/${article.slug}`} className="text-primary font-bold text-sm uppercase tracking-wider hover:opacity-70 inline-flex items-center gap-2 group/link">
                       Read More
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                     </Link>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center py-12 bg-gray-50 rounded-3xl">
-                <p className="text-gray-500 font-medium">No articles found matching your criteria.</p>
+                <p className="text-gray-500 font-medium">No stories found matching your criteria.</p>
                 <button
-                  onClick={() => {setSelectedCountry('All'); setSearchQuery('');}}
+                  onClick={() => {setSelectedCategory('All'); setSearchQuery('');}}
                   className="mt-4 text-primary font-bold hover:underline"
                 >
                   Clear filters
@@ -109,7 +111,7 @@ const Blog = () => {
             <div className="bg-gray-50 p-8 rounded-3xl">
               <h3 className="font-bold text-xl mb-6">Popular Topics</h3>
               <div className="flex flex-wrap gap-2">
-                {['Visa Process', 'Relocation', 'Tech Jobs', 'Culture', 'Remote Work', 'Salary Guide', 'Healthcare', 'Engineering'].map(tag => (
+                {['Education', 'Health Care', 'Community', 'Child Protection', 'Success Stories', 'Empowerment', 'Uganda', 'NGO News'].map(tag => (
                   <span key={tag} className="bg-white border border-gray-200 px-3 py-1.5 rounded-full text-xs font-bold text-gray-600 hover:border-primary hover:text-primary cursor-pointer transition-colors">
                     {tag}
                   </span>
@@ -118,20 +120,20 @@ const Blog = () => {
             </div>
 
             <div className="bg-primary text-white p-8 rounded-3xl">
-                <h3 className="font-bold text-xl mb-4">Downloadable Guides</h3>
+                <h3 className="font-bold text-xl mb-4">Support Resources</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3 pb-4 border-b border-white/10 last:border-0 last:pb-0 cursor-pointer hover:opacity-80">
                     <div className="bg-white/10 p-2 rounded-lg"><FileText className="w-5 h-5" /></div>
                     <div>
-                      <p className="font-bold text-sm">Relocation Checklist</p>
-                      <p className="text-xs text-white/60">PDF • 2.4 MB</p>
+                      <p className="font-bold text-sm">Ministry Profile</p>
+                      <p className="text-xs text-white/60">PDF • 1.2 MB</p>
                     </div>
                   </li>
                   <li className="flex items-center gap-3 pb-4 border-b border-white/10 last:border-0 last:pb-0 cursor-pointer hover:opacity-80">
                     <div className="bg-white/10 p-2 rounded-lg"><FileText className="w-5 h-5" /></div>
                     <div>
-                      <p className="font-bold text-sm">Salary Report 2024</p>
-                      <p className="text-xs text-white/60">PDF • 5.1 MB</p>
+                      <p className="font-bold text-sm">Impact Report 2024</p>
+                      <p className="text-xs text-white/60">PDF • 3.5 MB</p>
                     </div>
                   </li>
                 </ul>

@@ -1,41 +1,41 @@
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { Sparkles } from "lucide-react";
 
-const placements = [
+const stories = [
   {
-    quote: "The move from Sao Paulo to Berlin seemed impossible until I found OpenDoor. The visa sponsorship was handled entirely by their team.",
-    name: "Carlos Rivera",
-    title: "Senior Android Engineer @ Volvo",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
-    location: "Berlin, Germany"
+    quote: "Thanks to Kaweesa Ministries, I am now in Primary 5 and I want to be a doctor to help my community.",
+    name: "Sarah Namukasa",
+    title: "Sponsored Student",
+    img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=400",
+    location: "Kampala, Uganda"
   },
   {
-    quote: "Relocating with a family is a huge decision. OpenDoor didn't just find me a job; they found us a home in Stockholm.",
-    name: "Aisha Hassan",
-    title: "Product Designer @ Spotify",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
-    location: "Stockholm, Sweden"
+    quote: "The vocational training gave me the skills to start my own tailoring business. Now I can support my siblings.",
+    name: "John Musoke",
+    title: "Vocational Graduate",
+    img: "https://images.unsplash.com/photo-1540914124281-3425879aa73e?auto=format&fit=crop&q=80&w=400",
+    location: "Wakiso, Uganda"
   },
   {
-    quote: "I had multiple offers, but OpenDoor's transparent look into the European tech market helped me choose the right path in Amsterdam.",
-    name: "David Chen",
-    title: "Backend Lead @ Klarna",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
-    location: "Amsterdam, Netherlands"
+    quote: "Supporting a child through Kaweesa has been the most rewarding experience. Seeing Sarah thrive brings me so much joy.",
+    name: "Emma Wilson",
+    title: "Child Sponsor",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400",
+    location: "London, UK"
   },
   {
-    quote: "The Blue Card process was intimidating, but having a dedicated legal expert made all the difference. Now I'm loving life in Munich.",
-    name: "Elena Petrova",
-    title: "Data Scientist @ Siemens",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
-    location: "Munich, Germany"
+    quote: "The health clinic saved my son's life when he had severe malaria. We are forever grateful for the ministry's care.",
+    name: "Grace Nakato",
+    title: "Community Member",
+    img: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=400",
+    location: "Luweero, Uganda"
   },
   {
-    quote: "From the first interview to my first day at Zalando, the support was world-class. European tech is lucky to have this bridge.",
-    name: "Jordan Smith",
-    title: "Full Stack Developer @ Zalando",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
-    location: "Berlin, Germany"
+    quote: "I am happy to be in school. I love learning new things every day with my friends.",
+    name: "Peter Lule",
+    title: "Student",
+    img: "https://images.unsplash.com/photo-1526976668912-1a8123a8746a?auto=format&fit=crop&q=80&w=400",
+    location: "Kampala, Uganda"
   }
 ];
 
@@ -46,31 +46,31 @@ const FoundersCircle = () => {
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-wider mb-6 border border-primary/10">
-              <Sparkles className="w-3 h-3" /> The Network Effect
+              <Sparkles className="w-3 h-3" /> Our Impact
             </div>
             <h2 className="text-5xl md:text-6xl font-display text-primary dark:text-white mb-6">
-              The Founders' <br/> <span className="text-gray-400">Circle.</span>
+              Our <br/> <span className="text-gray-400">Community.</span>
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed">
-              Join thousands of professionals who have bridged the gap between their global talent and Europe's premier companies. This isn't just a list—it's a movement.
+              Real stories of transformation and hope from the children, families, and supporters who make this ministry possible. Together, we are changing lives.
             </p>
           </div>
           <div className="flex flex-col items-end text-right">
-             <div className="text-4xl font-display text-primary dark:text-white mb-1">500+</div>
-             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Active Relocations This Month</p>
+             <div className="text-4xl font-display text-primary dark:text-white mb-1">90+</div>
+             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Children Supported Every Day</p>
           </div>
         </div>
       </div>
 
       <div className="relative">
         <InfiniteMovingCards
-          items={placements}
+          items={stories}
           direction="left"
           speed="slow"
           className="mb-8"
         />
         <InfiniteMovingCards
-          items={placements.slice().reverse()}
+          items={stories.slice().reverse()}
           direction="right"
           speed="normal"
         />

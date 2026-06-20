@@ -9,36 +9,36 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>About OpenDoor - Our Mission & Team</title>
-        <meta name="description" content="Learn about OpenDoor's mission to bridge the gap between global talent and European tech companies." />
+        <title>About Us - KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Learn about our mission to nurture, protect, and empower children in Uganda through comprehensive programs." />
       </Helmet>
       <div className="min-h-screen bg-white">
     <PageHeader
       title="Our Mission"
-      subtitle="Breaking down borders to connect talent with opportunity"
-      bgImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000"
+      subtitle="Transforming lives through love, care, and empowerment"
+      bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
     />
     <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="font-display text-4xl md:text-5xl mb-8">We believe talent is global, but opportunity is not.</h2>
+      <h2 className="font-display text-4xl md:text-5xl mb-8">Nurturing the next generation of Ugandan leaders.</h2>
       <p className="text-gray-600 text-lg leading-relaxed mb-12">
-        Founded in 2020, OpenDoor was born out of the frustration of navigating complex immigration systems and fragmented job markets. We set out to build a platform that not only connects brilliant minds with innovative companies but also removes the friction of international relocation.
+        KAWEESA CHILDREN'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs. We believe every child deserves a chance to thrive and reach their full potential.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-gray-100 py-12 mb-16">
         <div>
-          <p className="font-display text-4xl text-primary mb-2">50+</p>
-          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Countries</p>
+          <p className="font-display text-4xl text-primary mb-2">90+</p>
+          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Children Supported</p>
         </div>
         <div>
-          <p className="font-display text-4xl text-primary mb-2">2k+</p>
-          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Placements</p>
+          <p className="font-display text-4xl text-primary mb-2">4</p>
+          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Communities Served</p>
         </div>
         <div>
-          <p className="font-display text-4xl text-primary mb-2">300+</p>
-          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Partners</p>
+          <p className="font-display text-4xl text-primary mb-2">95%</p>
+          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">School Enrollment</p>
         </div>
         <div>
-          <p className="font-display text-4xl text-primary mb-2">98%</p>
-          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Visa Success</p>
+          <p className="font-display text-4xl text-primary mb-2">45+</p>
+          <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Families Empowered</p>
         </div>
       </div>
     </section>
@@ -55,17 +55,17 @@ const AboutUs = () => {
         content: (
           <div>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-              Founded in Berlin with a single mission: to make borders irrelevant for talent. We launched our first platform connecting Brazilian engineers with German tech startups.
+              KAWEESA CHILDREN'S MINISTRIES was established in Kampala with a vision to provide a safe haven and quality education for vulnerable children.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=800"
-                alt="Founding team"
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
+                alt="Initial setup"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
-                alt="Office culture"
+                src="https://images.unsplash.com/photo-1524062731294-1735db9341a2?auto=format&fit=crop&q=80&w=800"
+                alt="Community outreach"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
             </div>
@@ -77,17 +77,17 @@ const AboutUs = () => {
         content: (
           <div>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-              Reached our first 100 successful placements. We expanded our operations to the Netherlands and established our first dedicated legal team to handle complex visa sponsorships.
+              We reached our first 50 children through our education support program. We expanded our operations to Wakiso district and established our first mobile health clinic.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&q=80&w=800"
-                alt="Amsterdam expansion"
+                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800"
+                alt="Education support"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
-                alt="Business development"
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800"
+                alt="Health mission"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
             </div>
@@ -99,17 +99,17 @@ const AboutUs = () => {
         content: (
           <div>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-              Launched the "Visa Assistance" program, providing end-to-end legal support for talents from 50+ countries. Our network of partner companies grew to 150+, including major industry leaders.
+              Launched the "Holistic Care" program, providing comprehensive medical and nutritional support. Our network of community volunteers grew to 100+, reaching rural areas of Luweero.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=800"
-                alt="Visa support team"
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800"
+                alt="Nutrition program"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
-                alt="Handshake"
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800"
+                alt="Community volunteers"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
             </div>
@@ -121,17 +121,17 @@ const AboutUs = () => {
         content: (
           <div>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-              Record-breaking year with 1,000+ relocations. We expanded to Sweden and Spain, and reached a milestone of 300+ active partner companies across Europe.
+              Empowered over 45 families through our sustainable livelihood projects. We established a vocational training center for older youth to gain practical skills.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1509339022327-1e1e25360a41?auto=format&fit=crop&q=80&w=800"
-                alt="Sweden relocation"
+                src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=800"
+                alt="Vocational training"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=800"
-                alt="Tech events"
+                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800"
+                alt="Family empowerment"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
             </div>
@@ -143,17 +143,17 @@ const AboutUs = () => {
         content: (
           <div>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
-              With 2,000+ total placements and a 98% visa success rate, OpenDoor is the premier bridge to a European career. We're now introducing AI-powered matching and enhanced expat community features.
+              With over 90 children under our care and a 95% school enrollment rate, we are continuing to expand our impact. We are now focusing on building a dedicated children's home and medical facility.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-                alt="Digital impact"
+                src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80&w=800"
+                alt="Future home"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
-                alt="Our future"
+                src="https://images.unsplash.com/photo-1502086223501-7ea2443d8447?auto=format&fit=crop&q=80&w=800"
+                alt="Growing impact"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
             </div>

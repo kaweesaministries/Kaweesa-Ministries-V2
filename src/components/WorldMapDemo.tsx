@@ -8,7 +8,7 @@ export default function WorldMapDemo() {
         <p className="font-bold text-3xl md:text-5xl text-black font-display mb-4">
           Global{" "}
           <span className="text-primary">
-            {"Talent".split("").map((word, idx) => (
+            {"Support".split("").map((word, idx) => (
               <motion.span
                 key={idx}
                 className="inline-block"
@@ -23,7 +23,7 @@ export default function WorldMapDemo() {
           {", Local Impact"}
         </p>
         <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Connecting the brightest minds from across the world directly to Europe's leading tech hubs. We break down the borders so you can focus on innovation.
+          We connect compassionate supporters from across the globe directly to our children's programs in Uganda. Every contribution creates ripples of change that transform entire communities.
         </p>
       </div>
       <div className="max-w-5xl mx-auto px-6">
@@ -31,28 +31,28 @@ export default function WorldMapDemo() {
           lineColor="#047857" // emerald/green tint matching the platform's primary color
           dots={[
             {
-              start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-              end: { lat: 52.5200, lng: 13.4050 }, // Berlin
+              start: { lat: 51.5074, lng: -0.1278 }, // London
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
             {
-              start: { lat: 37.7749, lng: -122.4194 }, // SF / Silicon Valley
-              end: { lat: 52.3676, lng: 4.9041 }, // Amsterdam
+              start: { lat: 40.7128, lng: -74.0060 }, // New York
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
             {
-              start: { lat: -23.5505, lng: -46.6333 }, // Sao Paulo, Brazil
-              end: { lat: 51.5074, lng: -0.1278 }, // London
+              start: { lat: 59.3293, lng: 18.0686 }, // Stockholm
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
             {
-              start: { lat: 14.5995, lng: 120.9842 }, // Manila, Philippines
-              end: { lat: 48.8566, lng: 2.3522 }, // Paris
+              start: { lat: 37.7749, lng: -122.4194 }, // San Francisco
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
             {
-              start: { lat: -1.2921, lng: 36.8219 }, // Nairobi
-              end: { lat: 59.3293, lng: 18.0686 }, // Stockholm
+              start: { lat: 52.3676, lng: 4.9041 }, // Amsterdam
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
             {
-              start: { lat: 30.0444, lng: 31.2357 }, // Cairo, Egypt
-              end: { lat: 48.1351, lng: 11.5820 }, // Munich
+              start: { lat: -33.8688, lng: 151.2093 }, // Sydney
+              end: { lat: 0.3476, lng: 32.5825 }, // Kampala, Uganda
             },
           ]}
         />
