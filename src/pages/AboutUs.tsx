@@ -45,6 +45,41 @@ const AboutUs = () => {
 
     <WorldMapDemo />
 
+    <section className="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
+      <div className="bg-primary text-white rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-lime/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
+
+        <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex-1">
+            <h2 className="font-display text-4xl md:text-5xl mb-8 leading-tight">Mum Janice: A Mother to Our Ministry Since 2021</h2>
+            <div className="space-y-6 text-white/90 text-lg leading-relaxed">
+              <p>
+                Mum Janice has been a blessing to our family at Kaweesa Children’s Ministries since 2021, when we first met her through Facebook. What began as a simple online connection grew into a meaningful relationship filled with kindness, compassion, and unwavering support.
+              </p>
+              <p>
+                Over the years, Mum Janice has stood beside us through both joyful moments and difficult challenges. She has shown genuine love and care for the children, the elderly, and everyone connected to our ministry. Her encouragement, prayers, and generous heart have brought hope to many lives.
+              </p>
+              <p>
+                To us, Mum Janice is more than a friend and supporter—she is a mother figure whose compassion has touched countless hearts. Her dedication reminds us that love knows no distance and that one caring person can make a tremendous difference in the lives of others.
+              </p>
+              <p className="font-medium italic">
+                We are deeply grateful for her friendship, guidance, and the love she has shared with our ministry since 2021. May God richly bless Mum Janice for her kindness and for being such an important part of our family—we love you so much mum.
+              </p>
+            </div>
+          </div>
+          <div className="w-full lg:w-[400px] flex-shrink-0 relative">
+            <div className="absolute inset-0 bg-accent-lime/20 rounded-3xl transform rotate-6 scale-105"></div>
+            <img
+              src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20MUMMY%20JANICE.jpeg"
+              alt="Mum Janice"
+              className="rounded-3xl relative z-10 shadow-2xl w-full aspect-[4/5] object-cover border-4 border-white/10"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="py-24 px-6 max-w-7xl mx-auto">
       <FinancialReadiness />
     </section>

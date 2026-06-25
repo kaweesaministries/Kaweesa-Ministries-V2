@@ -36,6 +36,13 @@ const stories = [
     title: "Student",
     img: "https://images.unsplash.com/photo-1526976668912-1a8123a8746a?auto=format&fit=crop&q=80&w=400",
     location: "Kampala, Uganda"
+  },
+  {
+    quote: "Mum Janice has been a blessing to our family since 2021. She is more than a friend—she is a mother figure whose compassion has touched countless hearts.",
+    name: "Mum Janice",
+    title: "Ministry Mother",
+    img: "https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20MUMMY%20JANICE.jpeg",
+    location: "Global Supporter"
   }
 ];
 
