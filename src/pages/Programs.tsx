@@ -14,7 +14,7 @@ const Programs = () => {
         <PageHeader
           title="Our Impact Programs"
           subtitle="Holistic support for children and families in Uganda"
-          bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
+          bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20Hero%20section%20best.jpeg"
         />
 
         <section className="py-24 px-6 max-w-7xl mx-auto">
@@ -37,8 +37,8 @@ const Programs = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400" alt="Education" className="rounded-3xl w-full h-64 object-cover" referrerPolicy="no-referrer" />
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=400" alt="Children" className="rounded-3xl w-full h-64 object-cover mt-8" referrerPolicy="no-referrer" />
+              <img src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(18).jpeg" alt="Education" className="rounded-3xl w-full h-64 object-cover" referrerPolicy="no-referrer" />
+              <img src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(19).jpeg" alt="Children" className="rounded-3xl w-full h-64 object-cover mt-8" referrerPolicy="no-referrer" />
             </div>
           </div>
 

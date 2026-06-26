@@ -76,14 +76,14 @@ export default function CombinedFeaturedSection() {
         <div className="grid sm:grid-cols-2 rounded-none bg-white dark:bg-primary border-t-0">
           <FeatureCard
             icon={<Files className="w-4 h-4 text-accent-lime" />}
-            image="/education-guide.png"
+            image="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(11).jpeg"
             title="Education Programs"
             subtitle="Access to learning."
             description="Ensuring every child has the fees, uniforms, and supplies needed to excel in school."
           />
           <FeatureCard
             icon={<Flower className="w-4 h-4 text-accent-gold" />}
-            image="/health-support.png"
+            image="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(12).jpeg"
             title="Health Initiatives"
             subtitle="Comprehensive care."
             description="Providing regular medical checkups, vaccinations, and nutrition support for all children."

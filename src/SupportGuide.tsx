@@ -82,7 +82,7 @@ const SupportGuide = () => {
       <PageHeader
         title="Support & Sponsorship Guide"
         subtitle="How you can make a lasting difference in Uganda"
-        bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/HERO%20SECTION%20IMAGE%20TWO.jpeg"
+        bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(37).jpeg"
       />
 
       {/* Introduction Section */}

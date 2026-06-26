@@ -16,7 +16,7 @@ const AboutUs = () => {
     <PageHeader
       title="Our Mission"
       subtitle="Transforming lives through love, care, and empowerment"
-      bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
+      bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(7).jpeg"
     />
     <section className="py-24 px-6 max-w-4xl mx-auto text-center">
       <h2 className="font-display text-4xl md:text-5xl mb-8">Nurturing the next generation of Ugandan leaders.</h2>
@@ -94,12 +94,12 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(4).jpeg"
                 alt="Initial setup"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(5).jpeg"
                 alt="Community outreach"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -116,12 +116,12 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(6).jpeg"
                 alt="Education support"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(8).jpeg"
                 alt="Health mission"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -138,12 +138,12 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(9).jpeg"
                 alt="Nutrition program"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(10).jpeg"
                 alt="Community volunteers"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -160,12 +160,12 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(11).jpeg"
                 alt="Vocational training"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(12).jpeg"
                 alt="Family empowerment"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -182,12 +182,12 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(13).jpeg"
                 alt="Future home"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1502086223501-7ea2443d8447?auto=format&fit=crop&q=80&w=800"
+                src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(17).jpeg"
                 alt="Growing impact"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
