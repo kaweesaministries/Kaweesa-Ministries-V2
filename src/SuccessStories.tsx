@@ -67,7 +67,7 @@ const SuccessStories = () => {
         <PageHeader
           title="Impact Stories"
           subtitle="Real lives, real transformation, real hope"
-          bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
+          bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(26).jpeg"
         />
 
         <section className="py-24 px-6 max-w-7xl mx-auto border-b border-gray-100">
@@ -93,7 +93,7 @@ const SuccessStories = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-6 bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/10 w-fit">
-                  <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=200" alt="Sarah" className="w-20 h-20 rounded-full border-4 border-white/20 object-cover" referrerPolicy="no-referrer" />
+                  <img src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(27).jpeg" alt="Sarah" className="w-20 h-20 rounded-full border-4 border-white/20 object-cover" referrerPolicy="no-referrer" />
                   <div>
                     <p className="font-bold text-xl text-white">Sarah Namukasa</p>
                     <p className="text-accent-lime font-medium">Sponsored Student</p>
@@ -105,7 +105,7 @@ const SuccessStories = () => {
               </div>
               <div className="flex-1 w-full relative">
                  <div className="absolute inset-0 bg-gradient-to-tr from-accent-lime/20 to-transparent rounded-3xl transform rotate-6 scale-105 z-0"></div>
-                 <img src="https://images.unsplash.com/photo-1524062731294-1735db9341a2?auto=format&fit=crop&q=80&w=800" alt="Sarah at school" className="rounded-3xl relative z-10 shadow-2xl border border-white/10 object-cover h-[500px] w-full" referrerPolicy="no-referrer" />
+                 <img src="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(28).jpeg" alt="Sarah at school" className="rounded-3xl relative z-10 shadow-2xl border border-white/10 object-cover h-[500px] w-full" referrerPolicy="no-referrer" />
               </div>
             </div>
           </motion.div>

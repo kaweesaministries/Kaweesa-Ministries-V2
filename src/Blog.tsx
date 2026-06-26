@@ -30,7 +30,7 @@ const Blog = () => {
       <PageHeader
         title="Impact & Insights"
         subtitle="Stories and updates from our mission in Uganda"
-        bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/HERO%20SECTION%20IMAGE%20TWO.jpeg"
+        bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/KAWEESA%20CHILDREN'S%20MINISTRIES%20(36).jpeg"
       />
       <section className="py-24 px-6 max-w-7xl mx-auto">
 
