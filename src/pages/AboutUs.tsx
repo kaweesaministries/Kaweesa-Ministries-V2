@@ -99,7 +99,7 @@ const AboutUs = () => {
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
               <img
-                src="https://images.unsplash.com/photo-1524062731294-1735db9341a2?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800"
                 alt="Community outreach"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -116,7 +116,7 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800"
                 alt="Education support"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />
@@ -138,7 +138,7 @@ const AboutUs = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
                 alt="Nutrition program"
                 className="rounded-3xl object-cover h-44 md:h-60 w-full shadow-xl"
               />

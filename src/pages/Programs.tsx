@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
-import { CheckCircle2, GraduationCap, Sparkles, Shield, Users } from 'lucide-react';
+import { GraduationCap, Sparkles, Shield, Users } from 'lucide-react';
 import CombinedFeaturedSection from "../components/ui/combined-featured-section";
 
 const Programs = () => {
@@ -20,23 +20,21 @@ const Programs = () => {
         <section className="py-24 px-6 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl mb-6">Nurturing Potential</h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Our programs are designed to address the foundational needs of children, ensuring they have the tools and support necessary to build a better future for themselves and their communities.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Quality Education & School Supplies",
-                  "Nutritional Support & Medical Care",
-                  "Safe Environments & Protection",
-                  "Family Economic Empowerment"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
-                    <CheckCircle2 className="w-5 h-5 text-accent-lime" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <h2 className="font-display text-4xl md:text-5xl mb-6">Education Program: God’s Grace Primary and Infant School</h2>
+              <div className="space-y-6">
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  At Kaweesa Children’s Ministries, we believe that education is the foundation for a brighter future. Through our Education Program, we are proud to support <span className="text-primary font-semibold">God’s Grace Primary and Infant School</span>, where we currently provide quality education to over 100 children.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Our mission is to ensure that every child, regardless of their background, has access to the tools they need to succeed. We provide not only academic instruction but also essential support, including school fees, uniforms, and scholastic materials.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  God’s Grace Primary and Infant School is more than just a place of learning; it is a center of hope and transformation. By investing in these young minds, we are not only changing individual lives but also strengthening the community as a whole.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed font-medium italic border-l-4 border-accent-lime pl-6">
+                  "Together, we are creating a nurturing environment where children can dream big and achieve their full potential. We are grateful for the support of our donors and partners who make this possible."
+                </p>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400" alt="Education" className="rounded-3xl w-full h-64 object-cover" referrerPolicy="no-referrer" />
@@ -48,7 +46,7 @@ const Programs = () => {
             <div className="bg-gray-50 p-8 rounded-3xl">
               <GraduationCap className="w-10 h-10 text-primary mb-6" />
               <h3 className="font-bold text-xl mb-4">Education</h3>
-              <p className="text-gray-600 mb-6">Providing school fees, uniforms, and scholastic materials for over 90 children.</p>
+              <p className="text-gray-600 mb-6">Supporting God’s Grace Primary and Infant School with education for 100+ children.</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-3xl">
               <Sparkles className="w-10 h-10 text-primary mb-6" />
