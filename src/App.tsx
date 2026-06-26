@@ -50,7 +50,9 @@ import {
   Car,
   Wrench,
   Shield,
-  Send
+  Send,
+  Plus,
+  Minus
 } from "lucide-react";
 import CombinedFeaturedSection from "./components/ui/combined-featured-section";
 import { Timeline } from "./components/ui/timeline";
@@ -548,23 +550,65 @@ const Newsletter = () => {
   );
 };
 
-const FAQ = () => (
-  <section className="max-w-4xl mx-auto px-6 mb-24">
-    <h2 className="font-display text-4xl mb-12 text-center">Common questions</h2>
-    <div className="space-y-4">
-      {[
-        { q: "How can I sponsor a child?", a: "You can choose a child from our waiting list and commit to a monthly donation of $35, which covers their education, health care, and basic needs." },
-        { q: "Where does my donation go?", a: "100% of child sponsorship donations go directly to the care and support of the child. Administrative costs are covered by separate general grants." },
-        { q: "Can I visit the ministry in Uganda?", a: "Yes! We welcome supporters to visit our centers in Kampala and Wakiso. Please contact our team to arrange a visit." }
-      ].map((item, i) => (
-        <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-100">
-          <h3 className="font-bold text-lg mb-2">{item.q}</h3>
-          <p className="text-gray-600">{item.a}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const questions = [
+    { q: "How can I sponsor a child?", a: "You can choose a child from our waiting list and commit to a monthly donation of $35, which covers their education, health care, and basic needs." },
+    { q: "Where does my donation go?", a: "100% of child sponsorship donations go directly to the care and support of the child. Administrative costs are covered by separate general grants." },
+    { q: "Can I visit the ministry in Uganda?", a: "Yes! We welcome supporters to visit our centers in Kampala and Wakiso. Please contact our team to arrange a visit." }
+  ];
+
+  return (
+    <section className="max-w-4xl mx-auto px-6 mb-32">
+      <div className="text-center mb-16">
+        <h2 className="font-display text-5xl mb-4 tracking-tight">Common questions</h2>
+        <div className="h-1 w-20 bg-lime-400 mx-auto rounded-full" />
+      </div>
+      <div className="space-y-4">
+        {questions.map((item, i) => (
+          <div
+            key={i}
+            className={`group rounded-3xl transition-all duration-300 border-2 ${
+              openIndex === i
+                ? "bg-white border-primary shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]"
+                : "bg-white border-gray-100 hover:border-primary"
+            }`}
+          >
+            <button
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              className="w-full text-left p-8 flex items-center justify-between gap-4"
+            >
+              <h3 className="font-display text-xl md:text-2xl">{item.q}</h3>
+              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                openIndex === i ? "bg-primary text-lime-400" : "bg-gray-100 group-hover:bg-primary group-hover:text-white"
+              }`}>
+                {openIndex === i ? <Minus size={20} /> : <Plus size={20} />}
+              </div>
+            </button>
+            <AnimatePresence>
+              {openIndex === i && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-8 pb-8 pt-0">
+                    <p className="text-gray-600 text-lg leading-relaxed max-w-2xl border-l-4 border-lime-400 pl-6">
+                      {item.a}
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 const Home = () => {
 
