@@ -279,9 +279,9 @@ const ProgramCards = () => (
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        { title: "Education Program", location: "Kampala, Uganda", stats: "95% Enrollment Rate", badge: "SCHOOL SUPPORT", badgeColor: "bg-accent-gold", tag: "Education", tagIcon: GraduationCap, img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" },
-        { title: "Health & Nutrition", location: "Wakiso, Uganda", stats: "78% Malnutrition Reduction", badge: "MEDICAL CARE", badgeColor: "bg-accent-coral text-white", tag: "Health", tagIcon: Sparkles, img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" },
-        { title: "Family Empowerment", location: "Rural Communities", stats: "150+ Families Supported", badge: "ECONOMY", badgeColor: "bg-accent-lime", tag: "Empowerment", tagIcon: Users, img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" }
+        { title: "Education Program", location: "Kampala, Uganda", stats: "95% Enrollment Rate", badge: "SCHOOL SUPPORT", badgeColor: "bg-accent-gold", tag: "Education", tagIcon: GraduationCap, img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800" },
+        { title: "Health & Nutrition", location: "Wakiso, Uganda", stats: "78% Malnutrition Reduction", badge: "MEDICAL CARE", badgeColor: "bg-accent-coral text-white", tag: "Health", tagIcon: Sparkles, img: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=800" },
+        { title: "Family Empowerment", location: "Rural Communities", stats: "150+ Families Supported", badge: "ECONOMY", badgeColor: "bg-accent-lime", tag: "Empowerment", tagIcon: Users, img: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800" }
       ].map((program, i) => (
         <div key={i} className="group cursor-pointer">
           <div className="aspect-square rounded-2xl overflow-hidden mb-6 relative">
@@ -456,9 +456,9 @@ const CommunityExplorer = () => {
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        { name: "Kampala", country: "Uganda", children: "200+", focus: "Urban Youth", img: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?auto=format&fit=crop&q=80&w=800" },
-        { name: "Wakiso", country: "Uganda", children: "150+", focus: "Education", img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=800" },
-        { name: "Luweero", country: "Uganda", children: "100+", focus: "Health", img: "https://images.unsplash.com/photo-1524062731294-1735db9341a2?auto=format&fit=crop&q=80&w=800" }
+        { name: "Kampala", country: "Uganda", children: "200+", focus: "Urban Youth", img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" },
+        { name: "Wakiso", country: "Uganda", children: "150+", focus: "Education", img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" },
+        { name: "Luweero", country: "Uganda", children: "100+", focus: "Health", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" }
       ].map((community, i) => (
         <motion.div
           key={i}

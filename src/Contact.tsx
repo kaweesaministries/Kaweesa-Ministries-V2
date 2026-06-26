@@ -39,7 +39,7 @@ const Contact = () => {
       <PageHeader
         title="Contact Us"
         subtitle="Get in touch with our team"
-        bgImage="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
+        bgImage="https://pub-e17241423b304f39aba75c11baa88527.r2.dev/kaweesacharitypics/HERO%20SECTION%20IMAGE%20TWO.jpeg"
       />
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
