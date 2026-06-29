@@ -16,8 +16,8 @@ import Blog from './Blog';
 import BlogPost from './BlogPost';
 import Contact from './Contact';
 import Programs from './pages/Programs';
-import AboutUs from './pages/AboutUs';
 import FoundersCircle from './components/v2/FoundersCircle';
+import AboutSection from './components/AboutSection';
 import { blogPosts } from './data/blogPosts';
 import {
   Search,
@@ -113,7 +113,14 @@ const Navbar = () => {
             <Link className="hover:text-white transition-colors" to="/impact">Impact</Link>
             <Link className="hover:text-white transition-colors" to="/get-involved">Get Involved</Link>
             <Link className="hover:text-white transition-colors" to="/blog">Blog</Link>
-            <Link className="hover:text-white transition-colors" to="/about">About Us</Link>
+            <a className="hover:text-white transition-colors cursor-pointer" onClick={() => {
+              const el = document.getElementById('about');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                navigate('/#about');
+              }
+            }}>About Us</a>
             <Link className="hover:text-white transition-colors" to="/contact">Contact</Link>
           </div>
         </div>
@@ -144,7 +151,15 @@ const Navbar = () => {
               <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/get-involved" onClick={() => setIsMenuOpen(false)}>Get Involved</Link>
 
               <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+              <a className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10 cursor-pointer" onClick={() => {
+                setIsMenuOpen(false);
+                const el = document.getElementById('about');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  navigate('/#about');
+                }
+              }}>About Us</a>
               <Link className="text-white text-lg font-medium hover:text-white/70 transition-colors py-2 border-b border-white/10" to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             </div>
 
@@ -566,9 +581,19 @@ const FAQ = () => (
   </section>
 );
 
-const Home = () => {
 
-  
+const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#about') {
+      const el = document.getElementById('about');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Helmet>
@@ -577,6 +602,9 @@ const Home = () => {
       </Helmet>
       <Hero />
       <Partners />
+
+      <AboutSection />
+
       <Values />
 
       <FoundersCircle />
@@ -612,7 +640,7 @@ export default function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/impact" element={<Programs />} />
         <Route path="/get-involved" element={<SupportGuide />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about" element={<Home />} />
         <Route path="/support-guide" element={<SupportGuide />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/blog" element={<Blog />} />
