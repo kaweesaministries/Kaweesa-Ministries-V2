@@ -7,8 +7,9 @@ const Programs = () => {
   return (
     <>
       <Helmet>
-        <title>Our Programs - KAWEESA CHILDREN'S MINISTRIES</title>
-        <meta name="description" content="Explore our comprehensive programs in Education, Health, Protection, and Family Empowerment in Uganda." />
+        <title>Our Impact Programs | Education & Healthcare NGO Uganda</title>
+        <meta name="description" content="Explore our comprehensive NGO programs in Uganda: Education at God’s Grace Primary, Health initiatives, Child Protection, and Family Empowerment." />
+        <link rel="canonical" href="https://kaweesachildrensministries.org/programs" />
       </Helmet>
       <div className="min-h-screen bg-white">
         <PageHeader

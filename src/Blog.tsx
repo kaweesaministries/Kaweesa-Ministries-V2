@@ -23,8 +23,9 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Impact Blog - KAWEESA CHILDREN'S MINISTRIES</title>
-        <meta name="description" content="Read our latest stories of impact, program updates, and news from our communities in Uganda." />
+        <title>Impact & Success Stories Blog | KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Read our latest stories of impact, success stories from God’s Grace Primary School, and NGO updates from our communities in Uganda." />
+        <link rel="canonical" href="https://kaweesachildrensministries.org/blog" />
       </Helmet>
       <div className="min-h-screen bg-white">
       <PageHeader
