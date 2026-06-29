@@ -32,8 +32,9 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - KAWEESA CHILDREN'S MINISTRIES</title>
-        <meta name="description" content="Get in touch with KAWEESA CHILDREN'S MINISTRIES to learn more about our programs or how you can support our mission in Uganda." />
+        <title>Contact Us | Partner with KAWEESA CHILDREN'S MINISTRIES</title>
+        <meta name="description" content="Get in touch with KAWEESA CHILDREN'S MINISTRIES (NGO). Contact us for child sponsorship, donations, or partnership inquiries in Uganda." />
+        <link rel="canonical" href="https://kaweesachildrensministries.org/contact" />
       </Helmet>
       <div className="min-h-screen bg-white">
       <PageHeader

@@ -198,8 +198,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="font-display text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-tight drop-shadow-lg"
         >
-          Transforming Lives <br/>
-          <span className="italic font-light">Through Love and Care</span>
+          KAWEESA CHILDREN'S <br/>
+          <span className="italic font-light">MINISTRIES (NGO)</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -597,8 +597,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>KAWEESA CHILDREN'S MINISTRIES - Transforming Lives Through Love and Care</title>
-        <meta name="description" content="KAWEESA CHILDREN'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs." />
+        <title>KAWEESA CHILDREN'S MINISTRIES (NGO) | Child Sponsorship & Education in Uganda</title>
+        <meta name="description" content="KAWEESA CHILDREN'S MINISTRY LIMITED is a Ugandan foundation (NGO) dedicated to improving lives through child sponsorship, education at God’s Grace Primary School, and health programs in Kampala, Wakiso, and Luweero." />
+        <link rel="canonical" href="https://kaweesachildrensministries.org/" />
       </Helmet>
       <Hero />
       <Partners />

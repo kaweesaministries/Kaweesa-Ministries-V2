@@ -17,8 +17,9 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | KCM Blog</title>
+        <title>{post.title} | KAWEESA CHILDREN'S MINISTRIES Blog</title>
         <meta name="description" content={post.metaDescription} />
+        <link rel="canonical" href={`https://kaweesachildrensministries.org/blog/${post.slug}`} />
       </Helmet>
     <div className="min-h-screen bg-white">
       <PageHeader
